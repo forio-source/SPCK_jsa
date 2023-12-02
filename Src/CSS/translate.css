@@ -14,7 +14,7 @@
     width: 50%;
     min-height: 200px;
 }
-#main > #wrapper > textarea#input {
+#main > #wrapper > textarea#input, #main > #wrapper > p {
     padding: 15px 20px;
     border-radius: 0;
 }
