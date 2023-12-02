@@ -67,9 +67,6 @@ header > div#right > ul > li:hover > i.fa-message {
     width: 100%;
     display: flex;
     align-items: center;
-    border-radius: var(--bdr-rad);
-    overflow: hidden;
-    box-shadow: var(--shadow);
 }
 #main > #wrapper > * {
     width: 50%;
@@ -80,9 +77,10 @@ header > div#right > ul > li:hover > i.fa-message {
     border-radius: 0;
     font-size: calc(var(--default-ft-sz) + 5px);
     height: fit-content;
-}
-#main > #wrapper > p {
-    background-color: rgb(245, 245, 245);
+    box-shadow: var(--shadow);
+    background-color: white;
+    margin: 0 5px;
+    border-radius: var(--bdr-rad);
 }
 
 #main > #languageOpt {
@@ -96,4 +94,5 @@ header > div#right > ul > li:hover > i.fa-message {
     width: 100%;
     margin: 0 5px;
     cursor: pointer;
+    box-shadow: var(--shadow);
 }
