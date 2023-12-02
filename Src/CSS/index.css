@@ -72,9 +72,6 @@ header > div#right > ul > li:hover > i.fa-bookmark {
 header > div#right > ul > li:hover > i.fa-message {
     color: rgb(100, 210, 240);
 }
-header > div#right > ul > li:hover > i.fa-language {
-    color: rgb(85, 233, 72);
-}
 
 #banner {
     text-align: center;
@@ -141,6 +138,25 @@ header > div#right > ul > li:hover > i.fa-language {
 }
 #main > button#save:active {
     scale: 0.9;
+}
+
+#ourFeature {
+    padding: 60px 110px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#ourFeature > div {
+    padding: 30px;
+    background-color: white;
+    width: calc(50% - 10px);
+    border-radius: var(--bdr-rad);
+    box-shadow: var(--shadow);
+}
+#ourFeature > div:hover {
+    scale: 1.05;
+    transform: rotateZ(-1deg);
+    cursor: pointer;
 }
 
 #introduce {

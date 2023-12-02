@@ -19,7 +19,6 @@
                 <ul>
                     <li onclick="golink('/Src/Pages/community.html')" title="Community"><i class="fa-regular fa-message"></i></li>
                     <li onclick="golink('/Src/Pages/saved.html')" title="Saved words"><i class="fa-regular fa-bookmark"></i></li>
-                    <li onclick="golink('/Src/Pages/translate.html')" title="Translate"><i class="fa-solid fa-language"></i></li>
                     <li onclick="golink('/Src/Pages/login-signup.html')" title="Log in"><h6 style="color: var(--text-color); margin: 0 10px 0 0; display: none;"></h6><i class="fa-solid fa-arrow-right-to-bracket"></i></i></li>
                 </ul>
             </div>
@@ -37,6 +36,15 @@
             <h1 id="word"></h1>
             <button id="save" style="display: none;" aria-label="Save Button" title="Save this word"><i class="fa-solid fa-bookmark"></i></button>
             <p id="meaning"></p>
+        </div>
+
+        <div id="ourFeature">
+            <div onclick="golink('/Src/Pages/translate.html')">
+                <h2>Translate</h2>
+            </div>
+            <div onclick="golink('/Src/Pages/grammar.html')">
+                <h2>Grammar Check</h2>
+            </div>
         </div>
 
         <div id="introduce">
