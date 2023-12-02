@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Homepage - Cova Dictionary</title>
+        <link rel="stylesheet" href="/Src/Global/glo.css">
+        <link rel="stylesheet" href="/Src/CSS/index.css">
+
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="section" id="left"><h1><span style="color: var(--main-color); font-weight: 800; font-size: 1.25em;">Cova</span> <span style="font-size: 0.8em;">Dictionary</span></h1></div>
+            <div class="section" id="center"><input id="findInput" type="text" placeholder="Search some words"></div>
+            <div class="section" id="right">
+                <ul>
+                    <li onclick="golink('/Src/Pages/community.html')" title="Community"><i class="fa-regular fa-message"></i></li>
+                    <li onclick="golink('/Src/Pages/saved.html')" title="Saved words"><i class="fa-regular fa-bookmark"></i></li>
+                    <li onclick="golink('/Src/Pages/translate.html')" title="Translate"><i class="fa-solid fa-language"></i></li>
+                    <li onclick="golink('/Src/Pages/login-signup.html')" title="Log in"><h6 style="color: var(--text-color); margin: 0 10px 0 0; display: none;"></h6><i class="fa-solid fa-arrow-right-to-bracket"></i></i></li>
+                </ul>
+            </div>
+        </header>
+
+        <div id="banner">
+            <div>
+                <h1>
+                    Welcome to Cova Dictionary
+                </h1>
+            </div>
+        </div>
+
+        <div id="main">
+            <h1 id="word"></h1>
+            <button id="save" style="display: none;" aria-label="Save Button" title="Save this word"><i class="fa-solid fa-bookmark"></i></button>
+            <p id="meaning"></p>
+        </div>
+
+        <div id="introduce">
+            <h1>About us</h1>
+            <div>
+                <p style="transform: translateZ(0);">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio ipsum dolore est veritatis facere, exercitationem vel aliquam quibusdam, sunt quaerat unde ex voluptas nostrum necessitatibus nam atque eum, voluptates id.</p>
+                <h1 style="transform: translateZ(-1px);"><span style="color: var(--main-color); font-weight: 800; font-size: 1.25em;">Cova</span> <span style="font-size: 0.8em;">Dictionary</span></h1>
+            </div>
+        </div>
+
+        <footer>
+            <p>Copyright ©2023 Cova Dictionary by Cova corporation</p>
+        </footer>
+
+        <script src="/Src/Global/glo.js"></script>
+        <script src="/Src/Script/index.js"></script>
+        <script crossorigin='anonymous' src='https://kit.fontawesome.com/56c3238a0e.js'></script>
+    </body>
+</html>

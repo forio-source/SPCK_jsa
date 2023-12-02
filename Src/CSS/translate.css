@@ -1,0 +1,22 @@
+#main {
+    padding: 50px 100px;
+}
+#main > #wrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-radius: var(--bdr-rad);
+    overflow: hidden;
+}
+#main > #wrapper > * {
+    width: 50%;
+    min-height: 200px;
+}
+#main > #wrapper > textarea#input {
+    padding: 15px 20px;
+    border-radius: 0;
+}
+#main > #wrapper > p {
+    background-color: rgb(220, 220, 220);
+}

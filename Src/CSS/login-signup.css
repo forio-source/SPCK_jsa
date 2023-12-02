@@ -1,0 +1,66 @@
+#wrapper {
+    display: flex;
+    height: 100vh;
+}
+#wrapper > #loginForm, #wrapper > #signupForm {
+    height: 100%;
+    width: 550px;
+    padding: calc((100vh - 380px) / 2) 60px;
+    background-color: var(--secondary-color);
+    box-shadow: 0 0 15px 0 #0002;
+}
+#wrapper > #loginForm > h1, #wrapper > #signupForm > h1 {
+    font-size: calc(var(--default-ft-sz) + 25px);
+    margin-top: 0;
+}
+#wrapper > #loginForm > input, #wrapper > #signupForm > input {
+    display: block;
+    width: 100%;
+    font-size: calc(var(--default-ft-sz) + 2px);
+    padding: 15px 20px;
+    margin-bottom: 25px;
+    border-radius: var(--bdr-rad);
+    box-shadow: var(--shadow);
+}
+#wrapper > #loginForm > a, #wrapper > #signupForm > a {
+    display: block;
+    color: var(--text-color);
+    cursor: pointer;
+    width: fit-content;
+    margin: 0 0 30px 15px;
+    font-size: var(--default-ft-sz);
+}
+#wrapper > #loginForm > button.submit, #wrapper > #signupForm > button.submit {
+    display: block;
+    width: 70%;
+    font-size: var(--default-ft-sz);
+    padding: 15px;
+    border: none;
+    border-radius: var(--bdr-rad);
+    cursor: pointer;
+    font-size: calc(var(--default-ft-sz) + 2px);
+    background-color: white;
+    box-shadow: var(--shadow);
+}
+#wrapper > #loginForm > button.submit:hover {
+    background-color: var(--main-color);
+    color: white;
+}
+#wrapper > #loginForm > button.submit:active, #wrapper > #signupForm > button.submit:active {
+    color: var(--main-color);
+    background-color: whitesmoke;
+}
+
+#wrapper > #banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: calc(100% - 550px);
+}
+#wrapper > #banner > h1 {
+    display: inline-block;
+    margin: 0;
+    font-size: calc(var(--default-ft-sz) + 40px);
+    user-select: none;
+}
