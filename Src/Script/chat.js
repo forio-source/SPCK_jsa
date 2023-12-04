@@ -35,32 +35,26 @@ async function chat(text) {
         area.appendChild(p);
 
         const body = {
-	    	model: 'gpt-3.5-turbo',
-	    	messages: [
-	    		{
-	    			role: 'user',
-	    			content: text,
-	    		}
-	    	]
-	    }
+            query: text
+        }
         const options = {
             method: 'POST',
-	        headers: {
-	        	'content-type': 'application/json',
-	        	'Content-Type': 'application/json',
-	        	'X-RapidAPI-Key': '51adffd33cmsh6ff182208e964d0p1daa72jsn5c703584e8a7',
-	        	'X-RapidAPI-Host': 'chat-gpt26.p.rapidapi.com'
-	        },
-	        body: JSON.stringify(body),
+            headers: {
+                'content-type': 'application/json',
+                'X-RapidAPI-Key': '51adffd33cmsh6ff182208e964d0p1daa72jsn5c703584e8a7',
+                'X-RapidAPI-Host': 'open-ai25.p.rapidapi.com'
+            },
+            body: JSON.stringify(body)
         };
         
-        const response = await fetch("https://chat-gpt26.p.rapidapi.com/", options);
-        const result = await response;
-        console.log(result);
+        const response = await fetch("https://open-ai25.p.rapidapi.com/ask", options);
+        const result = await response.text();
+        const completed = JSON.parse(result);
         
-        //let responseP = document.createElement("p");
-        //responseP.classList.add("response", "active");
-        //responseP.innerText = ;
+        let responseP = document.createElement("p");
+        responseP.classList.add("response", "active");
+        responseP.innerText = completed.response;
+        area.appendChild(responseP)
     }
 }
 
