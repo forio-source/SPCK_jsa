@@ -1,0 +1,108 @@
+header {
+    background-color: #fafafa;
+    padding: 15px 30px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--text-color);
+}
+header > div.section {
+    width: calc(100% / 3 - 20px);
+    height: 100%;
+}
+header > div#left > h1 {
+    margin: 0;
+}
+header > div#right {
+    height: 100%;
+}
+header > div#right > ul {
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+header > div#right > ul > li {
+    display: inline-block;
+    aspect-ratio: 1/1;
+    height: 100%;
+    padding: 5px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: var(--bdr-rad);
+}
+header > div#right > ul > li:hover {
+    background-color: white;
+    box-shadow: var(--shadow);
+    scale: 1.05;
+}
+header > div#right > ul > li:active {
+    scale: 0.95;
+}
+header > div#right > ul > li:hover > i {
+    font-weight: bold !important;
+}
+header > div#right > ul > li:hover > i.fa-circle-user {
+    color: rgb(250, 150, 50);
+}
+header > div#right > ul > li:hover > i.fa-bookmark {
+    color: rgb(240, 100, 100);
+}
+header > div#right > ul > li:hover > i.fa-message {
+    color: rgb(100, 210, 240);
+}
+
+#main {
+    margin-top: 80px;
+    padding: 80px 120px;
+}
+#main > #chatArea {
+    min-height: 100%;
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+}
+#main > #chatArea p {
+    margin: 5px 0;
+    font-size: calc(var(--default-ft-sz) + 3px);
+    padding: 10px 20px;
+    border-radius: var(--bdr-rad);
+    box-shadow: var(--shadow);
+}
+#main > #chatArea p.user {
+    background-color: white;
+    align-self: flex-end;
+}
+#main > #chatArea p.response {
+    background-color: var(--main-color);
+    color: white;
+    align-self: start;
+}
+#main > textarea#input {
+    padding: 20px 25px;
+    font-size: calc(var(--default-ft-sz) + 4px);
+    box-shadow: var(--shadow);
+    background-color: white;
+    border-radius: var(--bdr-rad);
+    width: 100%;
+    height: 150px;
+}
+#main > button#send {
+    font-size: calc(var(--default-ft-sz) + 4px);
+    box-shadow: var(--shadow);
+    background-color: var(--main-color);
+    color: white;
+    border-radius: var(--bdr-rad);
+    padding: 15px 25px;
+    border: none;
+    margin-top: 20px;
+}

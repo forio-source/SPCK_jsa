@@ -1,6 +1,5 @@
 const input = document.getElementById("input");
 const output = document.getElementById("output");
-const similar = document.getElementById("matches");
 const from = document.getElementById("from");
 const to = document.getElementById("to");
 
