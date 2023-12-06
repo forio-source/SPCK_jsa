@@ -2,27 +2,17 @@ const input = document.getElementById("input");
 const send = document.getElementById("send");
 const optionsSelect = document.getElementById("options");
 
-if (localStorage.getItem("Email") != undefined) {
-    let instance = document.querySelector('header > div#right > ul > li[title="Log in"]');
-    let string = localStorage.getItem("Email");
-    let emailName = string.split("@");
-    let getEmail = emailName[0];
-
-    if (getEmail.length > 8) {
-        emailName = getEmail.substring(0, 8) + "...";
-    }
-    else {
-        emailName = getEmail
-    }
-
-    instance.setAttribute("onclick", "golink('/Src/Pages/account.html')")
+if (localStorage.getItem("Account") != undefined) {
+    let instance = document.querySelector('header > ul > li#account');
+    instance.setAttribute("onclick", "golink('/Src/Pages/account.html')");
     instance.style = "aspect-ratio: unset; padding: 5px 15px";
-    instance.setAttribute("title", string);
-    instance.querySelector("h6").innerText = emailName;
-    instance.querySelector("h6").style.display = "initial";
-
-    instance.querySelector("i").classList.remove("fa-arrow-right-to-bracket");
-    instance.querySelector("i").classList.add("fa-circle-user");
+    
+    document.querySelector("body").style.overflow = "hidden";
+    document.getElementById("introduce").style.display = "none";
+    document.querySelector("footer").style.display = "none";
+}
+else {
+    document.getElementById("main").style.display = "none";
 };
 
 async function chat(text) {

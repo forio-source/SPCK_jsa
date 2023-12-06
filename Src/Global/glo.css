@@ -82,11 +82,16 @@ footer {
     transform: initial;
     margin-top: 80px;
 }
+footer * {
+    opacity: 1 !important;
+    transform: initial;
+}
 footer > p {
     color: white;
     text-align: center;
-    opacity: 1 !important;
-    transform: initial;
+}
+footer > p a {
+    color: rgba(255, 255, 255, 0.7) !important;
 }
 .active {
     opacity: 1;

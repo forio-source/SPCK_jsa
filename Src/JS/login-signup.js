@@ -10,8 +10,23 @@ login.addEventListener("submit", (e) => {
         Pass: document.querySelector("form#loginForm > input#password").value,
     }
 
-    if (values.Email == localStorage.getItem("Email") && values.Pass == localStorage.getItem("Password")) {
-        location = "/Src/Pages/index.html"
+    if (localStorage.getItem("Account") != undefined) {
+        let account = localStorage.getItem("Account");
+        account = JSON.parse(account);
+        if (values.Email == account.email && values.Pass == account.password) {
+            location = "/Src/Pages/Cova/home.html";
+        }
+        else if (!emailDomains.some(i => values.Email.includes(i))) {
+            document.querySelector("form#signupForm > input.email").style.backgroundColor = "rgb(150, 50, 50)";
+            alert("Invaild email");
+        }
+        else if (values.Pass != account.password) {
+            document.querySelector("form#signupForm > input#password1").style.backgroundColor = "rgb(150, 50, 50)";
+            alert("Your password is wrong");
+        }
+    }
+    else {
+        alert("No account exist on this device");
     }
 });
 
@@ -24,11 +39,27 @@ signup.addEventListener("submit", (e) => {
         RePass: document.querySelector("form#signupForm > input#password2").value,
     }
 
-    if (emailDomains.some(i => values.Email.includes(i)) && values.Pass.length >= 6 && values.Pass == values.RePass && localStorage.getItem("Email") == undefined && localStorage.getItem("Password") == undefined) {
-        localStorage.setItem("Email", values.Email);
-        localStorage.setItem("Password", values.RePass);
+    if (emailDomains.some(i => values.Email.includes(i)) && values.Pass.length >= 6 && values.Pass == values.RePass && localStorage.getItem("Account") == undefined) {
+        let account = {
+            email: values.Email,
+            password: values.RePass,
+            usingPack: "Free",
+            covaDictionaryLogedin: false,
+        }
+        localStorage.setItem("Account", JSON.stringify(account));
         login.style = "display: block";
         signup.style = "display: none";
+    }
+    else if (!emailDomains.some(i => values.Email.includes(i))) {
+        document.querySelector("form#signupForm > input.email").style.backgroundColor = "rgb(150, 50, 50)"
+        alert("Invaild email")
+    }
+    else if (values.Pass.length < 6) {
+        document.querySelector("form#signupForm > input#password1").style.backgroundColor = "rgb(150, 50, 50)"
+        alert("Your password is shorter than 6 symbol")
+    }
+    else if (values.Pass != values.RePass) {
+        document.querySelector("form#signupForm > input#password2").style.backgroundColor = "rgb(150, 50, 50)"
     }
 });
 

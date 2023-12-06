@@ -1,0 +1,212 @@
+:root {
+    --main-color: rgb(65, 150, 255);
+    --primary-color: rgb(33, 75, 128);
+    --secondary-color: rgb(21, 50, 85);
+    --tertiary-color: rgb(16, 36, 64);
+    --bg-color: rgb(11, 25, 43);
+    --title-color: rgb(220, 220, 220);
+    --text-color: rgb(150, 150, 150);
+    --lt-text-color: rgb(70, 70, 70);
+    --bdr-rad: 15px;
+    --default-ft-sz: 18px;
+    --shadow: 0px 3px 12px 0 #0002;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Nunito';
+    transition: all .2s ease;
+    box-sizing: border-box;
+}
+*:focus {
+    outline: none;
+}
+
+button.btn {
+    padding: 10px 30px;
+    font-size: calc(var(--default-ft-sz) + 4px);
+    color: white;
+    background-color: var(--main-color);
+    border-radius: var(--bdr-rad);
+    cursor: pointer;
+    border: none;
+    margin-top: 20px;
+    box-shadow: var(--shadow);
+}
+button.btn:hover {
+    background-color: white;
+    color: var(--main-color);
+}
+textarea, input, select {
+    resize: none;
+    font-size: var(--default-ft-sz);
+    border: none;
+    color: var(--title-color);
+    background-color: var(--secondary-color);
+    border-radius: var(--bdr-rad);
+    box-shadow: var(--shadow);
+}
+textarea::placeholder, input::placeholder {
+    color: var(--text-color);
+}
+textarea:focus::placeholder, input:focus::placeholder {
+    color: transparent;
+}
+a {
+    text-decoration: none;
+    color: var(--main-color);
+}
+body {
+    max-width: 100%;
+    background-color: var(--bg-color);
+}
+body * {
+    opacity: 0;
+    transform: translateX(-20px);
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 25px 0;
+    color: var(--title-color);
+}
+ul {
+    list-style: none;
+}
+p, span {
+    color: var(--text-color);
+    font-size: var(--default-ft-sz);
+}
+h6 {
+    font-size: calc(var(--default-ft-sz) + 2px);
+}
+h5 {
+    font-size: calc(var(--default-ft-sz) + 4px);
+}
+h4 {
+    font-size: calc(var(--default-ft-sz) + 6px);
+}
+h3 {
+    font-size: calc(var(--default-ft-sz) + 8px);
+}
+h2 {
+    font-size: calc(var(--default-ft-sz) + 10px);
+}
+h1 {
+    font-size: calc(var(--default-ft-sz) + 12px);
+}
+
+footer {
+    background-color: var(--secondary-color);
+    padding: 20px 30px;
+    opacity: 1 !important;
+    transform: initial;
+    margin-top: 80px;
+}
+footer > p {
+    color: var(--title-color);
+    text-align: center;
+    opacity: 1 !important;
+    transform: initial;
+}
+.active {
+    opacity: 1;
+    transform: initial;
+}
+
+header {
+    background-color:  var(--tertiary-color);
+    padding: 20px 50px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--text-color);
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    box-shadow: var(--shadow);
+}
+header > div.section {
+    width: calc(100% / 3 - 20px);
+    height: 100%;
+}
+header > img {
+    height: 65%;
+    -webkit-user-drag: none;
+}
+header > ul {
+    max-width: 800px;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+header > ul * {
+    color: var(--text-color);
+}
+header > ul > li {
+    display: inline-block;
+    aspect-ratio: 1/1;
+    height: 100%;
+    padding: 5px;
+    margin-left: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    cursor: pointer;
+    position: relative;
+}
+header > ul > li::before {
+    content: "";
+    display: block;
+    height: 4px;
+    width: calc(100% - 40px);
+    background-color: var(--main-color);
+    position: absolute;
+    bottom: -3px;
+    border-radius: 2px;
+    transition: all .2s ease;
+    opacity: 0;
+}
+header > ul > li > span {
+    font-size: 25px;
+    position: relative;
+}
+header > ul > li > span i.top {
+    position: absolute;
+    top: 4px;
+    left: -1px;
+}
+header > ul > li#account {
+    aspect-ratio: initial;
+    margin-left: 50px;
+}
+header > ul > li#chat > span {
+    transition: all .75s ease;
+}
+header > ul > li#account::after {
+    content: "";
+    display: block;
+    height: 30px;
+    width: 2px;
+    background-color: rgba(255, 255, 255, 0.25);
+    position: absolute;
+    left: -30px;
+}
+header > ul > li:hover * {
+    color: var(--title-color);
+}
+header > ul > li[title="Premium"]:hover * {
+    color: goldenrod;
+}
+header > ul > li:hover > i {
+    font-weight: bold !important;
+}
+header > ul > li#chat:hover > span {
+    transform: rotateZ(360deg) !important;
+}
+header > ul > li:hover::before {
+    width: calc(100% - 20px);
+    opacity: 1;
+}

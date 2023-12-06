@@ -3,29 +3,6 @@ const save = document.getElementById("save");
 const text = document.getElementById("word");
 const meaning = document.getElementById("meaning");
 
-if (localStorage.getItem("Email") != undefined) {
-    let instance = document.querySelector('header > div#right > ul > li[title="Log in"]');
-    let string = localStorage.getItem("Email");
-    let emailName = string.split("@");
-    let getEmail = emailName[0];
-
-    if (getEmail.length > 8) {
-        emailName = getEmail.substring(0, 8) + "...";
-    }
-    else {
-        emailName = getEmail
-    }
-
-    instance.setAttribute("onclick", "golink('/Src/Pages/account.html')")
-    instance.style = "aspect-ratio: unset; padding: 5px 15px";
-    instance.setAttribute("title", string);
-    instance.querySelector("h6").innerText = emailName;
-    instance.querySelector("h6").style.display = "initial";
-
-    instance.querySelector("i").classList.remove("fa-arrow-right-to-bracket");
-    instance.querySelector("i").classList.add("fa-circle-user");
-};
-
 async function dictionary(word) {
     if (word != "") {
         text.innerText = "Getting data";

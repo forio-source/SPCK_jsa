@@ -1,13 +1,14 @@
-const data = JSON.parse(localStorage.getItem("Saved"));
+const saved = JSON.parse(localStorage.getItem("Saved"));
+const data = JSON.parse(localStorage.getItem("Account"));
 const list = document.getElementById("list");
 const btns = list.getElementsByTagName("button");
 
-if (localStorage.getItem("Email") == undefined) {
+if (localStorage.getItem("Account") == undefined || data.covaDictionaryLogedin == false) {
     location = "/Src/Pages/account.html"
 }
 
-if (data != undefined && data.length > 0) {
-    for (let i = 0; i < data.length; i++) {
+if (saved != undefined && saved.length > 0) {
+    for (let i = 0; i < saved.length; i++) {
         let list = document.getElementById("list");
 
         let item = document.createElement("li");
@@ -15,7 +16,7 @@ if (data != undefined && data.length > 0) {
         let btn = document.createElement("button");
         let icon = document.createElement("i");
 
-        title.innerText = data[i];
+        title.innerText = saved[i];
         item.classList.add("active")
         title.classList.add("active")
         btn.classList.add("active")
@@ -39,9 +40,9 @@ for (let i = 0; i < btns.length; i++) {
     let parent = this.parentNode;
     let value = parent.querySelector("h2").innerText;
 
-    let index = data.indexOf(value);
+    let index = saved.indexOf(value);
     console.log(value, index)
-    let array = data;
+    let array = saved;
     if (index > -1) {
         array.splice(index, 1);
     };

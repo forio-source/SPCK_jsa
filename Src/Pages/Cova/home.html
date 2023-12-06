@@ -3,9 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Homepage - Cova Dictionary</title>
-        <link rel="stylesheet" href="/Src/Global/glo.css">
-        <link rel="stylesheet" href="/Src/CSS/index.css">
+        <title>CovaSoft</title>
+        <link rel="stylesheet" href="/Src/Global/cova.css">
+        <link rel="stylesheet" href="/Src/CSS/Cova/home.css">
 
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
@@ -13,21 +13,26 @@
     </head>
     <body>
         <header>
-            <div class="section" id="left"><h1><span style="color: var(--main-color); font-weight: 800; font-size: 1.25em;">Cova</span> <span style="font-size: 0.8em;">Dictionary</span></h1></div>
-            <div class="section" id="center"><input id="findInput" type="text" placeholder="Search some words"></div>
-            <div class="section" id="right">
-                <ul>
-                    <li onclick="golink('/Src/Pages/Cova/chat.html')" title="Cova ChatAI"><i class="fa-regular fa-message"></i></li>
-                    <li onclick="golink('/Src/Pages/saved.html')" title="Saved words"><i class="fa-regular fa-bookmark"></i></li>
-                    <li onclick="golink('/Src/Pages/login-signup.html')" title="Log in"><h6 style="color: var(--text-color); margin: 0 10px 0 0; display: none;"></h6><i class="fa-solid fa-arrow-right-to-bracket"></i></i></li>
-                </ul>
-            </div>
+            <img src="/Assets/Icons/logo.png" alt="Logo">
+            <ul>
+                <li title="Home" onclick="golink('/Src/Pages/Cova/home.html')"><i class="fa-solid fa-house"></i></li>
+                <li title="About us"><i class="fa-solid fa-circle-info"></i></li>
+                <li title="Our products" style="font-size: 30px;"><ion-icon name="albums"></ion-icon></li>
+                <li title="Cova assistant" onclick="golink('/Src/Pages/Cova/chat.html')" id="chat">
+                    <span>
+                        <i class="fa-regular fa-square"></i>
+                        <i class="fa-regular fa-square top" style="transform: rotateZ(45deg);"></i>
+                    </span>
+                </li>
+                <li title="Premium"><i class="fa-solid fa-crown"></i></li>
+                <li id="account" onclick="golink('/Src/Pages/Cova/login-signup.html')"><h6 style="margin: 0 10px 0 0;">Log in</h6><i class="fa-solid fa-arrow-right-to-bracket"></i></i></li>
+            </ul>
         </header>
 
         <div id="banner">
             <div>
                 <h1>
-                    Welcome to Cova Dictionary
+                    We are aiming to the new age of tech
                 </h1>
             </div>
         </div>
@@ -42,7 +47,7 @@
             <div onclick="golink('/Src/Pages/translate.html')">
                 <h2>Translate</h2>
             </div>
-            <div onclick="golink('/Src/Pages/Cova/chat.html')">
+            <div onclick="golink('/Src/Pages/chat.html')">
                 <h2>Cova ChatAI</h2>
             </div>
         </div>
@@ -56,11 +61,13 @@
         </div>
 
         <footer>
-            <p>Copyright ©2023 Cova Dictionary by <a href="../Pages/Cova/home.html">CovaSoft</a></p>
+            <p>©2023 CovaSoft corporation</p>
         </footer>
 
         <script src="/Src/Global/glo.js"></script>
-        <script src="/Src/JS/index.js"></script>
+        <script src="/Src/JS/main.js"></script>
         <script crossorigin='anonymous' src='https://kit.fontawesome.com/56c3238a0e.js'></script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     </body>
 </html>

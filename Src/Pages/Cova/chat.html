@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cova assistant - CovaSoft</title>
+        <link rel="stylesheet" href="/Src/Global/cova.css">
+        <link rel="stylesheet" href="/Src/CSS/Cova/chat.css">
+
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+        </style>
+    </head>
+    <body>
+        <header>
+            <img src="/Assets/Icons/logo.png" alt="Logo">
+            <ul>
+                <li title="Home" onclick="golink('/Src/Pages/Cova/home.html')"><i class="fa-solid fa-house"></i></li>
+                <li title="About us"><i class="fa-solid fa-circle-info"></i></li>
+                <li title="Our products" style="font-size: 30px;"><ion-icon name="albums"></ion-icon></li>
+                <li title="Cova assistant" onclick="golink('/Src/Pages/Cova/chat.html')" id="chat">
+                    <span>
+                        <i class="fa-regular fa-square"></i>
+                        <i class="fa-regular fa-square top" style="transform: rotateZ(45deg);"></i>
+                    </span>
+                </li>
+                <li title="Premium"><i class="fa-solid fa-crown"></i></li>
+                <li id="account" onclick="golink('/Src/Pages/Cova/login-signup.html')"><h6 style="margin: 0 10px 0 0;">Log in</h6><i class="fa-solid fa-arrow-right-to-bracket"></i></i></li>
+            </ul>
+        </header>
+
+        <div id="introduce">
+            <span style="font-size: 100px; text-align: center; position: relative; display: block; margin-top: 80px;">
+                <i class="fa-regular fa-square"></i>
+                <i class="fa-regular fa-square top" style="position: absolute; transform: rotateZ(45deg) translate(-52px, 72px);"></i>
+            </span>
+            <h1 style="font-size: 50px; text-align: center; margin: 0 0 230px;">Cova assistant</h1>
+            <h1><i class="fa-solid fa-object-group"></i>Designed for you</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias fuga porro quisquam doloribus animi officiis quas! Omnis dicta exercitationem maiores veritatis nobis aliquam minima laborum sapiente obcaecati cupiditate, maxime officia? Distinctio, hic! Dolorum repellat autem ducimus cupiditate debitis, corrupti odio ab unde, sapiente, dolorem consequatur perspiciatis provident. Suscipit, eligendi vel.</p>
+            <h1><i class="fa-regular fa-star"></i>Aim to your experience</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi obcaecati voluptate maxime dolore autem placeat voluptatum vel nobis facilis iusto impedit atque eligendi sequi soluta, repellat quia provident in alias! Laborum voluptatem fugit est labore nulla sunt, quasi, adipisci, incidunt laboriosam corporis omnis minima? Doloribus necessitatibus dolore placeat distinctio libero, ex hic quia temporibus optio, alias, sed illum. Quia consequuntur recusandae, sequi repellendus sapiente blanditiis ducimus enim cum corrupti, adipisci quasi beatae veritatis. Quis incidunt rem doloremque delectus veniam a!</p>
+            <h1><i class="fa-solid fa-comments"></i>Easy to use!</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab id, asperiores eius doloremque sint accusamus obcaecati vel facilis molestiae natus soluta mollitia veritatis fugit aliquid voluptatibus nobis illum modi. Nemo quod quasi doloremque a reiciendis aut dolorem quisquam itaque animi?</p>
+            <button class="btn"><i class="fa-solid fa-crown" style="margin-right: 10px;"></i>Upgrade to use</button>
+        </div>
+
+        <div id="main">
+            <div id="chatArea">
+            </div>
+            <textarea id="input" type="text" placeholder="Type your message..." maxlength="1500"></textarea>
+            <button id="send" class="active btn">Send</button>
+        </div>
+
+        <footer>
+            <p>©2023 CovaSoft corporation</p>
+        </footer>
+
+        <script src="/Src/JS/chat.js"></script>
+        <script src="/Src/Global/glo.js"></script>
+        <script crossorigin='anonymous' src='https://kit.fontawesome.com/56c3238a0e.js'></script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    </body>
+</html>
