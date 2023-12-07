@@ -18,93 +18,67 @@
     font-size: calc(var(--default-ft-sz) + 25px);
     height: fit-content;
 }
-#main {
-    padding: 80px 200px;
+.section-wrapper {
+    padding: 60px 120px;
+}
+.section-wrapper#quote {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.section-wrapper#quote div#icon {
+    background: url(/Assets/Icons/smiling\ old\ man.jpg) center/cover;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    height: 150px;
+    box-shadow: 0 10px 10px 0 #0005;
+}
+.section-wrapper#products > div {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: auto auto;
+    margin-top: 60px;
+}
+.section-wrapper#products > h1 {
+    font-size: calc(var(--default-ft-sz) + 24px);
     text-align: center;
-    box-shadow: 0 0 20px 0 #0003;
-    display: none;
+}
+.section-wrapper#products > div > div {
+    background-color: var(--tertiary-color);
+    border-radius: var(--bdr-rad);
+    padding: 40px;
+    height: 300px;
+    box-shadow: var(--shadow);
+    cursor: pointer;
+    overflow: hidden;
+    user-select: none;
+}
+.section-wrapper#products > div > div:first-child {
+    grid-column-start: 1;
+    grid-column-end: 3;
     position: relative;
 }
-#main > p#meaning {
-    margin-top: 50px;
-    text-align: left;
-}
-#main::before {
-    content: "\f518";
-    font-family: "Font Awesome 6 Free";
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 160px;
-    aspect-ratio: 1/1;
-    color: var(--secondary-color);
-    font-size: 5em;
+.section-wrapper#products > div > div:first-child::before {
+    content: "Beta";
+    padding: 10px 30px;
+    font-size: calc(var(--default-ft-sz) + 6px);
+    color: white;
+    background-color: var(--main-color);
     position: absolute;
-    top: -80px;
-    font-weight: 700;
-    background-color: white;
-    border-radius: 100%;
-    left: calc(50% - (160px / 2));
-    box-shadow: 0 10px 15px #0001;
+    top: 0;
+    left: 0;
+    border-radius: var(--bdr-rad) 0 var(--bdr-rad) 0;
+    box-shadow: 0 0 5px 2px #0002;
 }
-#main > h1#word {
-    font-size: 40px;
+.section-wrapper#products > div > div:hover {
+    scale: 1.025;
+}
+.section-wrapper#products > div > div:active {
+    scale: 0.975;
+}
+.section-wrapper#products > div > div > h1 {
     margin-bottom: 0;
 }
-#main > button#save {
-    position: absolute;
-    top: 107px;
-    font-size: 25px;
-    padding: 8px 0;
-    width: 50px;
-    border-radius: var(--bdr-rad);
-    text-align: center;
-    border: none;
-    cursor: pointer;
-    color: var(--primary-color);
-    background-color: white;
-    box-shadow: var(--shadow);
-}
-#main > button#save:hover {
-    scale: 1.1;
-}
-#main > button#save:active {
-    scale: 0.9;
-}
-
-#ourFeature {
-    padding: 60px 110px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-#ourFeature > div {
-    padding: 30px;
-    background-color: white;
-    width: calc(50% - 10px);
-    border-radius: var(--bdr-rad);
-    box-shadow: var(--shadow);
-}
-#ourFeature > div:hover {
-    scale: 1.05;
-    transform: rotateZ(-1deg);
-    cursor: pointer;
-}
-
-#introduce {
-    padding: 50px 160px;
-}
-#introduce > div {
-    display: flex;
-    align-items: center;
-}
-#introduce > div > p {
-    width: 55%;
-    padding: 0 30px 0 0;
-}
-#introduce > div > h1 {
-    width: 45%;
-    text-align: center;
-    font-size: 60px;
-    user-select: none;
+.section-wrapper#products > div > div > p {
+    margin-top: 0;
 }

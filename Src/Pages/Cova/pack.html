@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Get CovaSoft premium!</title>
+        <link rel="stylesheet" href="/Src/Global/cova.css">
+        <link rel="stylesheet" href="/Src/CSS/Cova/pack.css">
+
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+        </style>
+    </head>
+    <body>
+        <header>
+            <img src="/Assets/Icons/logo.png" alt="Logo">
+            <ul>
+                <li title="Home" onclick="golink('/Src/Pages/Cova/home.html')"><i class="fa-solid fa-house"></i></li>
+                <li title="About us"><i class="fa-solid fa-circle-info"></i></li>
+                <li title="Our products" style="font-size: 30px;"><ion-icon name="albums"></ion-icon></li>
+                <li title="Cova assistant" onclick="golink('/Src/Pages/Cova/chat.html')" id="chat">
+                    <span>
+                        <i class="fa-regular fa-square"></i>
+                        <i class="fa-regular fa-square top" style="transform: rotateZ(45deg);"></i>
+                    </span>
+                </li>
+                <li title="Premium" onclick="golink('/Src/Pages/Cova/pack.html')"><i class="fa-solid fa-crown"></i></li>
+                <li id="account" onclick="golink('/Src/Pages/Cova/login-signup.html')"><h6 style="margin: 0 10px 0 0;">Log in</h6><i class="fa-solid fa-arrow-right-to-bracket"></i></i></li>
+            </ul>
+        </header>
+
+        <div id="main">
+            <h1 style="text-align: center; font-size: calc(var(--default-ft-sz) + 25px);">
+                <i class="fa-solid fa-crown" style="font-size: 3em; margin-bottom: 30px; color: goldenrod;"></i>
+                <br>
+                CovaSoft Premium pack
+            </h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque libero quod qui amet facere! Magni facere modi, minus rerum illo fugit! Corrupti quos deserunt enim! Laudantium cupiditate ratione libero voluptatem, autem ad impedit laboriosam, minima officia dolor sequi praesentium enim.
+            </p>
+            <div id="wrapper">
+                <div>
+                    <h1>
+                        Free
+                    </h1>
+                    <p>
+                        <i class="fa-solid fa-check"></i> Cova Dictionary
+                        <br>
+                        <i class="fa-solid fa-check"></i> Cova Workspace (Free, Student)
+                        <br>
+                        <i class="fa-solid fa-check"></i> Cova Studio (Basic)
+                        <br>
+                        <i class="fa-solid fa-check"></i> Shopping in Cova Store
+                    </p>
+                    <button class="btn">Free</button>
+                </div>
+                <div id="premium">
+                    <h1>
+                        Premium
+                    </h1>
+                    <p>
+                        <i class="fa-solid fa-check"></i> Cova Dictionary
+                        <br>
+                        <i class="fa-solid fa-check"></i> Cova Workspace (Professional, Enterprise)
+                        <br>
+                        <i class="fa-solid fa-check"></i> Cova Studio (Pro)
+                        <br>
+                        <i class="fa-solid fa-check"></i> Shopping in Cova Store
+                        <br>
+                        <i class="fa-solid fa-check"></i> 10% discount for all Cova products
+                        <br>
+                        <i class="fa-solid fa-check"></i> Antom Defender
+                        <br>
+                        <i class="fa-solid fa-check"></i> Cova Games Studio
+                        <br>
+                        <i class="fa-solid fa-check"></i> Cova assistant
+                    </p>
+                    <button class="btn">299.000đ / month</button>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>©2023 CovaSoft corporation</p>
+        </footer>
+
+        <script src="/Src/Global/glo.js"></script>
+        <script src="/Src/JS/pack.js"></script>
+        <script crossorigin='anonymous' src='https://kit.fontawesome.com/56c3238a0e.js'></script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    </body>
+</html>

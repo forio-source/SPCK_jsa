@@ -57,6 +57,7 @@ a {
     text-decoration: none;
     color: var(--main-color);
 }
+
 body {
     max-width: 100%;
     background-color: var(--bg-color);
@@ -65,6 +66,35 @@ body * {
     opacity: 0;
     transform: translateX(-20px);
 }
+body::-webkit-scrollbar {
+    background-color: var(--tertiary-color);
+    width: 15px;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border: 3px solid var(--tertiary-color);
+    border-radius: 10px;
+}
+body::-webkit-scrollbar-thumb:hover {
+    background-color: var(--main-color);
+}
+body::-webkit-scrollbar-button:single-button:vertical:decrement {
+    background-color: var(--secondary-color);
+    border: 3px solid var(--tertiary-color);
+    border-radius: 100%;
+}
+body::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+    background-color: var(--primary-color);
+}
+body::-webkit-scrollbar-button:single-button:vertical:increment {
+    background-color: var(--secondary-color);
+    border: 3px solid var(--tertiary-color);
+    border-radius: 100%;
+}
+body::-webkit-scrollbar-button:vertical:single-button:increment:hover {
+    background-color: var(--primary-color);
+}
+
 h1, h2, h3, h4, h5, h6 {
     margin: 25px 0;
     color: var(--title-color);

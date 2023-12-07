@@ -1,9 +1,9 @@
 const saved = JSON.parse(localStorage.getItem("Saved"));
-const data = JSON.parse(localStorage.getItem("Account"));
+const account = JSON.parse(localStorage.getItem("Account"));
 const list = document.getElementById("list");
 const btns = list.getElementsByTagName("button");
 
-if (localStorage.getItem("Account") == undefined || data.covaDictionaryLogedin == false) {
+if (localStorage.getItem("Account") == undefined || account.covaDictionaryLogedin == false) {
     location = "/Src/Pages/account.html"
 }
 

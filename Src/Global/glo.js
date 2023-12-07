@@ -40,6 +40,10 @@ if (document.querySelector('header > ul > li#account')) {
         
         instance.querySelector("i").classList.remove("fa-arrow-right-to-bracket");
         instance.querySelector("i").classList.add("fa-circle-user");
+
+        if (data.usingPack == "Premium") {
+            document.querySelector('li[title="Premium"] > i').style.color = "goldenrod"
+        }
     };
 };
 if (document.querySelector('header > div#right > ul > li[title="Log in"]')) {

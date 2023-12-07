@@ -1,8 +1,9 @@
 const input = document.getElementById("input");
 const send = document.getElementById("send");
 const optionsSelect = document.getElementById("options");
+const account = JSON.parse(localStorage.getItem("Account"));
 
-if (localStorage.getItem("Account") != undefined) {
+if (account && account.usingPack == "Premium") {
     let instance = document.querySelector('header > ul > li#account');
     instance.setAttribute("onclick", "golink('/Src/Pages/account.html')");
     instance.style = "aspect-ratio: unset; padding: 5px 15px";

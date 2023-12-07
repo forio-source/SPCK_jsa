@@ -24,7 +24,7 @@
                         <i class="fa-regular fa-square top" style="transform: rotateZ(45deg);"></i>
                     </span>
                 </li>
-                <li title="Premium"><i class="fa-solid fa-crown"></i></li>
+                <li title="Premium" onclick="golink('/Src/Pages/Cova/pack.html')"><i class="fa-solid fa-crown"></i></li>
                 <li id="account" onclick="golink('/Src/Pages/Cova/login-signup.html')"><h6 style="margin: 0 10px 0 0;">Log in</h6><i class="fa-solid fa-arrow-right-to-bracket"></i></i></li>
             </ul>
         </header>
@@ -37,26 +37,46 @@
             </div>
         </div>
 
-        <div id="main">
-            <h1 id="word"></h1>
-            <button id="save" style="display: none;" aria-label="Save Button" title="Save this word"><i class="fa-solid fa-bookmark"></i></button>
-            <p id="meaning"></p>
+        <div class="section-wrapper" id="quote">
+            <div id="icon"></div>
+            <h1>CEO quote - Joe Bedin</h1>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero delectus laudantium ad at nostrum molestias repudiandae pariatur? Sapiente ea quibusdam dolores error unde beatae nemo placeat maiores laudantium, quam, possimus esse temporibus ipsum delectus repellendus, quo alias? Quaerat reprehenderit aliquam, animi molestiae quam earum fugiat debitis nemo ab aut aperiam.
+            </p>
         </div>
-
-        <div id="ourFeature">
-            <div onclick="golink('/Src/Pages/translate.html')">
-                <h2>Translate</h2>
-            </div>
-            <div onclick="golink('/Src/Pages/chat.html')">
-                <h2>Cova ChatAI</h2>
-            </div>
-        </div>
-
-        <div id="introduce">
-            <h1>About us</h1>
+        <div class="section-wrapper" id="products">
+            <h1>
+                Our products
+            </h1>
             <div>
-                <p style="transform: translateZ(0);">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio ipsum dolore est veritatis facere, exercitationem vel aliquam quibusdam, sunt quaerat unde ex voluptas nostrum necessitatibus nam atque eum, voluptates id.</p>
-                <h1 style="transform: translateZ(-1px);"><span style="color: var(--main-color); font-weight: 800; font-size: 1.25em;">Cova</span> <span style="font-size: 0.8em;">Dictionary</span></h1>
+                <div>
+                    <h1>Cova assistant</h1>
+                    <p>Friendly copilot</p>
+                </div>
+                <div>
+                    <h1>Cova Dictionary</h1>
+                    <p>Dictionary</p>
+                </div>
+                <div>
+                    <h1>Antom Defender</h1>
+                    <p>Antivirus</p>
+                </div>
+                <div>
+                    <h1>Cova Studio</h1>
+                    <p>Coding program</p>
+                </div>
+                <div>
+                    <h1>Cova Games Studio</h1>
+                    <p>Game-developing place</p>
+                </div>
+                <div>
+                    <h1>Cova Workspace</h1>
+                    <p>Office tools</p>
+                </div>
+                <div>
+                    <h1>Cova Plus</h1>
+                    <p>Web browser</p>
+                </div>
             </div>
         </div>
 
@@ -65,7 +85,7 @@
         </footer>
 
         <script src="/Src/Global/glo.js"></script>
-        <script src="/Src/JS/main.js"></script>
+        <script src="/Src/JS/home.js"></script>
         <script crossorigin='anonymous' src='https://kit.fontawesome.com/56c3238a0e.js'></script>
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

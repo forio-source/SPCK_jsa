@@ -2,18 +2,28 @@ const login = document.getElementById("login");
 const mysaves = document.getElementById("mysaves");
 const logout = document.getElementById("logout");
 
-if (localStorage.getItem("Email") != undefined) {
-    document.querySelector("div#wrapper > h1").innerText = localStorage.getItem("Email");
+if (localStorage.getItem("Account") != undefined) {
+    let data = JSON.parse(localStorage.getItem("Account"));
 
-    login.style = "display: none;"
-    mysaves.style = "display: block;"
-    logout.style = "display: block;"
+    if (data.covaDictionaryLogedin == true) {
+        document.querySelector("div#wrapper > h1").innerText = data.email;
+        
+        login.style = "display: none;";
+        mysaves.style = "display: block;";
+        logout.style = "display: block;";
+    }
+    
 };
 
 function logOut() {
-    localStorage.removeItem("Email");
-    localStorage.removeItem("Password");
-    localStorage.removeItem("Saved");
+    localStorage.clear();
 
-    location = "/Src/Pages/index.html"
+    location = "/Src/Pages/";
+}
+
+function logIn() {
+    let data = JSON.parse(localStorage.getItem("Account"));
+    data.covaDictionaryLogedin = true;
+    localStorage.setItem("Account", JSON.stringify(data));
+    location = "/Src/Pages/";
 }
