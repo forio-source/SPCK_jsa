@@ -56,6 +56,9 @@ p, span {
     color: var(--text-color);
     font-size: var(--default-ft-sz);
 }
+p {
+    margin: 15px 0;
+}
 h6 {
     font-size: calc(var(--default-ft-sz) + 2px);
 }
@@ -89,6 +92,7 @@ footer * {
 footer > p {
     color: white;
     text-align: center;
+    margin: 0;
 }
 footer > p a {
     color: rgba(255, 255, 255, 0.7) !important;

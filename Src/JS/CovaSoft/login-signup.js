@@ -44,7 +44,7 @@ signup.addEventListener("submit", (e) => {
             email: values.Email,
             password: values.RePass,
             usingPack: "Free",
-            covaDictionaryLogedin: false,
+            covaDictionaryLoggedin: false,
         }
         localStorage.setItem("Account", JSON.stringify(account));
         login.style = "display: block";

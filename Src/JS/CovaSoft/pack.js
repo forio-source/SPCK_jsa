@@ -11,7 +11,7 @@ if (localStorage.getItem("Account")) {
     };
 }
 else {
-    location = "/Src/Pages/Cova/login-signup.html"
+    location = "/Src/Pages/CovaSoft/login-signup.html"
 };
 
 free.addEventListener("click", () => {

@@ -48,7 +48,7 @@ if (document.querySelector('header > ul > li#account')) {
 };
 if (document.querySelector('header > div#right > ul > li[title="Log in"]')) {
     if (localStorage.getItem("Account") != undefined) {
-        if (data.covaDictionaryLogedin == true) {
+        if (data.covaDictionaryLoggedin == true) {
             let instance = document.querySelector('header > div#right > ul > li[title="Log in"]');
             let string = data.email;
             let emailName = string.split("@");

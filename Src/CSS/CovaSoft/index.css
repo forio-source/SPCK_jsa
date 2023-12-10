@@ -26,17 +26,40 @@
     flex-direction: column;
     align-items: center;
 }
-.section-wrapper#quote div#icon {
+.section-wrapper#quote > div#icon {
     background: url(/Assets/Icons/smiling\ old\ man.jpg) center/cover;
     border-radius: 50%;
     aspect-ratio: 1/1;
     height: 150px;
     box-shadow: 0 10px 10px 0 #0005;
 }
+.section-wrapper#quote > p {
+    font-size: calc(var(--default-ft-sz) + 5px);
+    position: relative;
+    text-align: center;
+}
+.section-wrapper#quote > p::before {
+    content: "\f10d";
+    font-weight: bold;
+    font-size: 25px;
+    font-family: "Font Awesome 6 Free";
+    position: absolute;
+    top: 10px;
+    left: -50px;
+}
+.section-wrapper#quote > p::after {
+    content: "\f10e";
+    font-weight: bold;
+    font-size: 25px;
+    font-family: "Font Awesome 6 Free";
+    position: absolute;
+    top: 10px;
+    right: -50px;
+}
 .section-wrapper#products > div {
     display: grid;
     gap: 30px;
-    grid-template-columns: auto auto;
+    grid-template-columns: calc(50% - 15px) calc(50% - 15px);
     margin-top: 60px;
 }
 .section-wrapper#products > h1 {
@@ -52,13 +75,13 @@
     cursor: pointer;
     overflow: hidden;
     user-select: none;
+    position: relative;
 }
 .section-wrapper#products > div > div:first-child {
     grid-column-start: 1;
     grid-column-end: 3;
-    position: relative;
 }
-.section-wrapper#products > div > div:first-child::before {
+.section-wrapper#products > div > div:first-child::after {
     content: "Beta";
     padding: 10px 30px;
     font-size: calc(var(--default-ft-sz) + 6px);
@@ -66,8 +89,8 @@
     background-color: var(--main-color);
     position: absolute;
     top: 0;
-    left: 0;
-    border-radius: var(--bdr-rad) 0 var(--bdr-rad) 0;
+    left: 156.28px;
+    border-radius: 0 0 var(--bdr-rad) 0;
     box-shadow: 0 0 5px 2px #0002;
 }
 .section-wrapper#products > div > div:hover {
@@ -76,9 +99,38 @@
 .section-wrapper#products > div > div:active {
     scale: 0.975;
 }
+.section-wrapper#products > div > div.premium::before {
+    content: "Premium";
+    padding: 10px 30px;
+    font-size: calc(var(--default-ft-sz) + 6px);
+    color: white;
+    background-color: goldenrod;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: var(--bdr-rad) 0 var(--bdr-rad) 0;
+    box-shadow: 0 0 5px 2px #0002;
+}
+.section-wrapper#products > div > div.premium:first-child:before {
+    border-radius: var(--bdr-rad) 0 0 0;
+}
 .section-wrapper#products > div > div > h1 {
     margin-bottom: 0;
+    max-width: 75%;
 }
 .section-wrapper#products > div > div > p {
     margin-top: 0;
+    max-width: 50%;
+}
+.section-wrapper#products > div > div > img {
+    height: 200px;
+    position: absolute;
+    right: 40px;
+    bottom: -30px;
+}
+.section-wrapper#products > div > div:first-child > img {
+    height: calc(100% - 100px);
+    position: absolute;
+    top: 50px;
+    right: 100px;
 }

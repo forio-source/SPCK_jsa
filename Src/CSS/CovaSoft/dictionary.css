@@ -1,0 +1,19 @@
+#introduce {
+    padding: 100px 180px 10px;
+    width: 100%;
+}
+#introduce > h1 {
+    text-align: center;
+    position: relative;
+    margin-top: 100px;
+    font-size: calc(var(--default-ft-sz) + 20px);
+}
+#introduce > h1 > i {
+    font-size: calc(var(--default-ft-sz) + 150px);
+    position: absolute;
+    color: rgba(255, 255, 255, 0.1);
+    z-index: -1;
+    top: -50px;
+    left: 0;
+    width: 100%;
+}

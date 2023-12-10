@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>CovaSoft</title>
         <link rel="stylesheet" href="/Src/Global/cova.css">
-        <link rel="stylesheet" href="/Src/CSS/Cova/home.css">
+        <link rel="stylesheet" href="/Src/CSS/CovaSoft/index.css">
 
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
@@ -15,17 +15,17 @@
         <header>
             <img src="/Assets/Icons/logo.png" alt="Logo">
             <ul>
-                <li title="Home" onclick="golink('/Src/Pages/Cova/home.html')"><i class="fa-solid fa-house"></i></li>
+                <li title="Home" onclick="golink('/Src/Pages/CovaSoft/')"><i class="fa-solid fa-house"></i></li>
                 <li title="About us"><i class="fa-solid fa-circle-info"></i></li>
                 <li title="Our products" style="font-size: 30px;"><ion-icon name="albums"></ion-icon></li>
-                <li title="Cova assistant" onclick="golink('/Src/Pages/Cova/chat.html')" id="chat">
+                <li title="Cova assistant" onclick="golink('/Src/Pages/CovaSoft/chat.html')" id="chat">
                     <span>
                         <i class="fa-regular fa-square"></i>
                         <i class="fa-regular fa-square top" style="transform: rotateZ(45deg);"></i>
                     </span>
                 </li>
-                <li title="Premium" onclick="golink('/Src/Pages/Cova/pack.html')"><i class="fa-solid fa-crown"></i></li>
-                <li id="account" onclick="golink('/Src/Pages/Cova/login-signup.html')"><h6 style="margin: 0 10px 0 0;">Log in</h6><i class="fa-solid fa-arrow-right-to-bracket"></i></i></li>
+                <li title="Premium" onclick="golink('/Src/Pages/CovaSoft/pack.html')"><i class="fa-solid fa-crown"></i></li>
+                <li id="account" onclick="golink('/Src/Pages/CovaSoft/login-signup.html')"><h6 style="margin: 0 10px 0 0;">Log in</h6><i class="fa-solid fa-arrow-right-to-bracket"></i></i></li>
             </ul>
         </header>
 
@@ -39,9 +39,11 @@
 
         <div class="section-wrapper" id="quote">
             <div id="icon"></div>
-            <h1>CEO quote - Joe Bedin</h1>
+            <h1>Joe Bedin - CEO</h1>
             <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero delectus laudantium ad at nostrum molestias repudiandae pariatur? Sapiente ea quibusdam dolores error unde beatae nemo placeat maiores laudantium, quam, possimus esse temporibus ipsum delectus repellendus, quo alias? Quaerat reprehenderit aliquam, animi molestiae quam earum fugiat debitis nemo ab aut aperiam.
+                Don't wait for the perfect moment,
+                <br>
+                take the moment and make it perfect.
             </p>
         </div>
         <div class="section-wrapper" id="products">
@@ -49,33 +51,60 @@
                 Our products
             </h1>
             <div>
-                <div>
+                <div class="premium" onclick="golink('/Src/Pages/CovaSoft/chat.html')">
                     <h1>Cova assistant</h1>
                     <p>Friendly copilot</p>
+                    <img src="/Assets/Icons/covaassistant.png" alt="">
                 </div>
-                <div>
+                <div onclick="golink('/Src/Pages/CovaSoft/dictionary.html')">
                     <h1>Cova Dictionary</h1>
                     <p>Dictionary</p>
+                    <img src="/Assets/Icons/covadictionary.png" alt="">
                 </div>
-                <div>
+                <div class="premium">
                     <h1>Antom Defender</h1>
                     <p>Antivirus</p>
+                    <img src="/Assets/Icons/antomdefender.png" alt="">
                 </div>
                 <div>
                     <h1>Cova Studio</h1>
                     <p>Coding program</p>
+                    <img src="/Assets/Icons/covastudio.png" alt="">
                 </div>
-                <div>
+                <div class="premium">
                     <h1>Cova Games Studio</h1>
                     <p>Game-developing place</p>
+                    <img src="/Assets/Icons/covagamesstudio.png" alt="">
                 </div>
                 <div>
                     <h1>Cova Workspace</h1>
                     <p>Office tools</p>
+                    <img src="/Assets/Icons/covaworkspace.png" alt="">
                 </div>
                 <div>
                     <h1>Cova Plus</h1>
                     <p>Web browser</p>
+                    <img src="/Assets/Icons/covaplus.png" alt="">
+                </div>
+                <div>
+                    <h1>Hido</h1>
+                    <p>Stream movies</p>
+                    <img src="/Assets/Icons/hido.png" alt="">
+                </div>
+                <div>
+                    <h1>Cloudy Box</h1>
+                    <p>Free version of an app in Cova Workspace</p>
+                    <img src="/Assets/Icons/cloudybox-covaworkspace.png" alt="">
+                </div>
+                <div class="premium">
+                    <h1>Photorian</h1>
+                    <p>Make your photos awesome</p>
+                    <img src="/Assets/Icons/photorian.png" alt="">
+                </div>
+                <div>
+                    <h1>Cova Travel</h1>
+                    <p>Let's travel</p>
+                    <img src="/Assets/Icons/covatravel.png" alt="">
                 </div>
             </div>
         </div>
@@ -85,7 +114,7 @@
         </footer>
 
         <script src="/Src/Global/glo.js"></script>
-        <script src="/Src/JS/home.js"></script>
+        <script src="/Src/JS/CovaSoft/index.js"></script>
         <script crossorigin='anonymous' src='https://kit.fontawesome.com/56c3238a0e.js'></script>
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

@@ -45,7 +45,8 @@ async function chat(text) {
         let responseP = document.createElement("p");
         responseP.classList.add("response", "active");
         responseP.innerText = completed.response;
-        area.appendChild(responseP)
+        area.appendChild(responseP);
+        input.value = "";
     }
 }
 
