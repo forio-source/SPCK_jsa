@@ -1,0 +1,93 @@
+#main {
+    padding: 60px 80px;
+    display: flex;
+    align-items: center;
+}
+#left-sidebar-outer {
+    width: 340px;
+    position: fixed;
+    top: 90px;
+    left: -325px;
+    height: calc(100vh - 90px);
+    transition: all .75s ease;
+    z-index: 2;
+}
+#left-sidebar-outer:hover {
+    left: 0;
+}
+#left-sidebar-outer * {
+    opacity: 1;
+    transform: none;
+}
+#left-sidebar-outer > #left-sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    width: 320px;
+    background-color: var(--tertiary-color);
+    border-radius: var(--bdr-rad);
+    box-shadow: var(--shadow);
+    margin: 20px 0 0 20px;
+    height: calc(100% - 40px);
+}
+#left-sidebar-outer > #left-sidebar > input {
+    padding: 10px 15px;
+    width: 100%;
+}
+#left-sidebar-outer > #left-sidebar > ul#list {
+    margin-top: 30px;
+    height: 100%;
+    overflow-y: auto;
+}
+#left-sidebar-outer > #left-sidebar > ul#list > li {
+    font-size: var(--default-ft-sz);
+    color: var(--text-color);
+    cursor: pointer;
+    padding: 8px 15px;
+    border-radius: var(--bdr-rad);
+    position: relative;
+}
+#left-sidebar-outer > #left-sidebar > ul#list > li + li {
+    margin-top: 5px;
+}
+#left-sidebar-outer > #left-sidebar > ul#list > li.notification::after {
+    content: "New";
+    background-color: orangered;
+    color: white;
+    border-radius: 7px;
+    padding: 2px 7px;
+    position: absolute;
+    right: 8px;
+    top: calc(50% - 23px / 2);
+    font-size: calc(var(--default-ft-sz) - 4px);
+}
+#left-sidebar-outer > #left-sidebar > ul#list > li#onChoosing {
+    color: white;
+    background-color: var(--main-color);
+    padding-left: 20px;
+    box-shadow: var(--shadow);
+}
+#left-sidebar-outer > #left-sidebar > ul#list > li > i {
+    width: 40px;
+}
+#left-sidebar-outer > #left-sidebar > ul#list > li#onChoosing > i {
+    width: 35px;
+    color: white;
+}
+#left-sidebar-outer > #left-sidebar > ul#list > li:hover {
+    background-color: var(--secondary-color);
+    color: white;
+    padding-left: 20px;
+}
+#left-sidebar-outer > #left-sidebar > ul#list > li:hover > i {
+    width: 35px;
+    color: var(--main-color);
+}
+#left-sidebar-outer > #left-sidebar > ul#list > li#onChoosing:hover {
+    background-color: white;
+    color: var(--main-color);
+}
+#left-sidebar-outer > #left-sidebar > ul#list > li#onChoosing:hover > i {
+    color: var(--main-color);
+}

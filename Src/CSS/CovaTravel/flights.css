@@ -1,0 +1,70 @@
+#main {
+    /* padding: 60px 100px; */
+}
+#main > #img {
+    width: 100%;
+    height: 350px;
+    background: url(/Assets/Images/flights.jpg) center/cover no-repeat fixed;
+}
+#main > #content {
+    padding: 60px;
+    margin: -100px 120px 0;
+    background-color: white;
+    border-radius: var(--bdr-rad);
+    box-shadow: var(--shadow);
+}
+#main > #content > * {
+    margin-bottom: 20px;
+}
+#main > #content > select#from, #main > #content > select#to {
+    width: calc(50% - 7px);
+}
+#main > #content > select#type, #main > #content > select#class {
+    width: 100%;
+}
+#main > #content > input#departure, #main > #content > input#return {
+    width: calc(50% - 7px);
+}
+#main > #content > input#adults, #main > #content > input#children, #main > #content > input#infants {
+    width: calc(100% / 3 - 9px);
+}
+#main > #content > #result {
+    margin-top: 50px;
+}
+#main > #content > #result > div {
+    padding: 30px;
+    width: 100%;
+    border-radius: var(--bdr-rad);
+    box-shadow: var(--shadow);
+    background-color: rgb(250, 250, 250);
+}
+#main > #content > #result > div + div {
+    margin-top: 20px;
+}
+#main > #content > #result > div > div.top {
+    display: flex;
+    align-items: center;
+}
+#main > #content > #result > div > div.top > div.img {
+    height: 80px;
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+    border: 10px solid lightgray;
+    background-color: lightgray;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+#main > #content > #result > div > div.top > h1 {
+    margin-left: 30px;
+}
+#main > #content > #result > div > div.bottom {
+    margin-top: 10px;
+    padding: 20px;
+}
+#main > #content > #result > div > div.bottom + div.bottom {
+    border-top: 2px solid gray;
+}
+#main > #content > #result > div > div.bottom > span {
+    display: block;
+}

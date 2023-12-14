@@ -14,7 +14,7 @@ login.addEventListener("submit", (e) => {
         let account = localStorage.getItem("Account");
         account = JSON.parse(account);
         if (values.Email == account.email && values.Pass == account.password) {
-            location = "/Src/Pages/Cova/home.html";
+            location = "/Src/Pages/CovaSoft/";
         }
         else if (!emailDomains.some(i => values.Email.includes(i))) {
             document.querySelector("form#signupForm > input.email").style.backgroundColor = "rgb(150, 50, 50)";

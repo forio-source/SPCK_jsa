@@ -30,6 +30,9 @@ textarea, input, select {
     background-color: white;
     border-radius: var(--bdr-rad);
 }
+select {
+    cursor: pointer;
+}
 textarea::placeholder, input::placeholder {
     color: var(--lt-text-color);
 }

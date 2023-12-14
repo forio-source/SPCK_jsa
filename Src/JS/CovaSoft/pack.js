@@ -17,14 +17,14 @@ else {
 free.addEventListener("click", () => {
     if (localStorage.getItem("Account") && account.usingPack == "Premium") {
         account.usingPack = "Free";
-        location = "/Src/Pages/Cova/pack.html";
+        location = "/Src/Pages/CovaSoft/pack.html";
         localStorage.setItem("Account", JSON.stringify(account));
     }
 });
 premium.addEventListener("click", () => {
     if (localStorage.getItem("Account") && account.usingPack == "Free") {
         account.usingPack = "Premium";
-        location = "/Src/Pages/Cova/pack.html";
+        location = "/Src/Pages/CovaSoft/pack.html";
         localStorage.setItem("Account", JSON.stringify(account));
     }
 });

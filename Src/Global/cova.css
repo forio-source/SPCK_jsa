@@ -31,24 +31,24 @@ body * {
     opacity: 0;
     transform: translateX(-20px);
 }
-body::-webkit-scrollbar {
+::-webkit-scrollbar {
     background-color: var(--tertiary-color);
     width: 15px;
 }
-body::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background-color: var(--primary-color);
     border: 3px solid var(--tertiary-color);
     border-radius: 10px;
 }
-body::-webkit-scrollbar-thumb:hover {
+::-webkit-scrollbar-thumb:hover {
     background-color: var(--main-color);
 }
-body::-webkit-scrollbar-button:single-button:vertical:decrement, body::-webkit-scrollbar-button:single-button:vertical:increment, body::-webkit-scrollbar-button:single-button:horizontal:decrement, body::-webkit-scrollbar-button:single-button:horizontal:increment {
+::-webkit-scrollbar-button:single-button:vertical:decrement, ::-webkit-scrollbar-button:single-button:vertical:increment, ::-webkit-scrollbar-button:single-button:horizontal:decrement, ::-webkit-scrollbar-button:single-button:horizontal:increment {
     background-color: var(--secondary-color);
     border: 3px solid var(--tertiary-color);
     border-radius: 100%;
 }
-body::-webkit-scrollbar-button:single-button:vertical:decrement:hover, body::-webkit-scrollbar-button:single-button:vertical:increment:hover, body::-webkit-scrollbar-button:single-button:horizontal:decrement:hover, body::-webkit-scrollbar-button:single-button:horizontal:increment:hover {
+::-webkit-scrollbar-button:single-button:vertical:decrement:hover, ::-webkit-scrollbar-button:single-button:vertical:increment:hover, ::-webkit-scrollbar-button:single-button:horizontal:decrement:hover, ::-webkit-scrollbar-button:single-button:horizontal:increment:hover {
     background-color: var(--primary-color);
 }
 

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Flights - Cova Travel</title>
+        <link rel="stylesheet" href="/Src/Global/travel.css">
+        <link rel="stylesheet" href="/Src/CSS/CovaTravel/flights.css">
+
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+        </style>
+    </head>
+    <body>
+        <div id="loginBlock">
+            <img src="/Assets/Icons/covatravel.png" alt="Logo">
+            <h1>Log in required</h1>
+            <p>To use Cova Travel, you need to have a logged in Cova account</p>
+            <a href="/Src/Pages/CovaSoft/login-signup.html">Login now</a>
+        </div>
+
+        <header>
+            <img src="/Assets/Icons/covatravel.png" alt="Logo">
+            <ul>
+                <li onclick="golink('/Src/Pages/CovaTravel/')"><i class="fa-solid fa-house"></i>Home</li>
+                <li><i class="fa-solid fa-cloud-sun"></i>Weather</li>
+                <li onclick="golink('/Src/Pages/CovaTravel/flights.html')"><i class="fa-solid fa-plane-departure"></i>Flights</li>
+                <li onclick="golink('/Src/Pages/CovaTravel/booking.html')"><i class="fa-solid fa-bed"></i>Hotels</li>
+                <li><i class="fa-solid fa-city"></i>Cities</li>
+            </ul>
+        </header>
+
+        <div id="main">
+            <div id="img"></div>
+            <div id="content">
+                <select onchange="change()" name="" id="type" style="margin-bottom: 80px;">
+                    <option value="oneway">One-way trip</option>
+                    <option value="round">Round trip</option>
+                </select>
+
+                <select name="" id="from">
+                    <option value="Ho Chi Minh city, Vietnam" selected>Ho Chi Minh</option>
+                    <option value="Hanoi, Vietnam">Ha Noi</option>
+                    <option value="Da Nang, Vietnam">Da Nang</option>
+                    <option value="Bangkok, Thailand">Bangkok</option>
+                    <option value="Chiang Mai, Thailand">Chiang Mai</option>
+                    <option value="Khon Kaen, Thailand">Khon Kaen</option>
+                    <option value="Vientiane, Laos">Vientiane</option>
+                    <option value="Phnom Penh, Cambodia">Phnom Penh</option>
+                    <option value="Battambang, Cambodia">Battambang</option>
+                    <option value="Hong Kong, Hong Kong SAR, China">Hong Kong</option>
+                    <option value="Xiamen, China">Xiamen</option>
+                    <option value="Shanghai, China">Shanghai</option>
+                    <option value="Beijing, China">Beijing</option>
+                    <option value="Seoul, South Korea">Seoul</option>
+                    <option value="Paris, France">Paris</option>
+                    <option value="London, United Kingdom">London</option>
+                    <option value="Barcelona, Spain">Barcelona</option>
+                    <option value="Male City and Airport, Maldives">Malé</option>
+                    <option value="New Delhi and NCR, India">New Delhi</option>
+                    <option value="New York (NY), United States">New York</option>
+                    <option value="Washington D.C., United States">Washington D.C.</option>
+                    <option value="Chicago (IL), United States">Chicago</option>
+                    <option value="Richmond (VA), United States">Richmond</option>
+                    <option value="Wilmington (NC), United States">Wilmington</option>
+                    <option value="Jacksonville (FL), United States">Jacksonville</option>
+                    <option value="Miami (FL), United States">Miami</option>
+                    <option value="Oklahoma City (OK), United States">Oklahoma</option>
+                    <option value="Houston (TX), United States">Houston</option>
+                    <option value="Las Vegas (NV), United States">Chicago</option>
+                    <option value="San Francisco (CA), United States">San Francisco</option>
+                    <option value="Los Angeles (CA), United States">Los Angeles</option>
+                    <option value="Toronto (ON), Canada">Toronto</option>
+                    <option value="Ottawa (ON), Canada">Ottawa</option>
+                </select>
+                <select name="" id="to" style="margin-left: 10px;">
+                    <option value="Hanoi, Vietnam" selected>Ha Noi</option>
+                    <option value="Da Nang, Vietnam">Da Nang</option>
+                    <option value="Bangkok, Thailand">Bangkok</option>
+                    <option value="Chiang Mai, Thailand">Chiang Mai</option>
+                    <option value="Khon Kaen, Thailand">Khon Kaen</option>
+                    <option value="Vientiane, Laos">Vientiane</option>
+                    <option value="Phnom Penh, Cambodia">Phnom Penh</option>
+                    <option value="Battambang, Cambodia">Battambang</option>
+                    <option value="Hong Kong, Hong Kong SAR, China">Hong Kong</option>
+                    <option value="Xiamen, China">Xiamen</option>
+                    <option value="Shanghai, China">Shanghai</option>
+                    <option value="Beijing, China">Beijing</option>
+                    <option value="Seoul, South Korea">Seoul</option>
+                    <option value="Paris, France">Paris</option>
+                    <option value="London, United Kingdom">London</option>
+                    <option value="Barcelona, Spain">Barcelona</option>
+                    <option value="Male City and Airport, Maldives">Malé</option>
+                    <option value="New Delhi and NCR, India">New Delhi</option>
+                    <option value="New York (NY), United States">New York</option>
+                    <option value="Washington D.C., United States">Washington D.C.</option>
+                    <option value="Chicago (IL), United States">Chicago</option>
+                    <option value="Richmond (VA), United States">Richmond</option>
+                    <option value="Wilmington (NC), United States">Wilmington</option>
+                    <option value="Jacksonville (FL), United States">Jacksonville</option>
+                    <option value="Miami (FL), United States">Miami</option>
+                    <option value="Oklahoma City (OK), United States">Oklahoma</option>
+                    <option value="Houston (TX), United States">Houston</option>
+                    <option value="Las Vegas (NV), United States">Chicago</option>
+                    <option value="San Francisco (CA), United States">San Francisco</option>
+                    <option value="Los Angeles (CA), United States">Los Angeles</option>
+                    <option value="Toronto (ON), Canada">Toronto</option>
+                    <option value="Ottawa (ON), Canada">Ottawa</option>
+                </select>
+                <input type="text" placeholder="Departure&nbsp;&nbsp;&nbsp;(yyyy-mm-dd)" id="departure">
+                <input type="text" placeholder="Return&nbsp;&nbsp;&nbsp;(yyyy-mm-dd)" id="return" style="margin-left: 10px;">
+                <input type="text" placeholder="Adults" id="adults">
+                <input type="text" placeholder="Children" id="children" style="margin-left: 10px;">
+                <input type="text" placeholder="Infants" id="infants" style="margin-left: 10px;">
+                <select name="" id="class">
+                    <option value="">Select a class</option>
+                    <option value="Economy">Economy</option>
+                    <option value="PremiumEconomy">Premium Economy</option>
+                    <option value="Business">Business</option>
+                    <option value="First">First</option>
+                </select>
+                <button id="submit" class="btn">Find</button>
+
+                <div id="result">
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>©2023 Coval Travel by <a href="/Src/Pages/CovaSoft/">CovaSoft</a></p>
+        </footer>
+
+        <script src="/Src/Global/travel.js"></script>
+        <script src="/Src/Global/glo.js"></script>
+        <script src="/Src/JS/CovaTravel/flights.js"></script>
+        <script crossorigin='anonymous' src='https://kit.fontawesome.com/56c3238a0e.js'></script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    </body>
+</html>

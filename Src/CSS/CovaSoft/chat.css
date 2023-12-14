@@ -17,6 +17,7 @@
     border-radius: var(--bdr-rad);
     box-shadow: var(--shadow);
     max-width: 60%;
+    transition: all .5s ease;
 }
 #main > #chatArea p.user {
     background-color: var(--tertiary-color);
@@ -44,12 +45,6 @@
 #main > button#send:hover {
     color: var(--main-color);
     background-color: white;
-}
-#main > button#send:active {
-    color: transparent;
-    width: 0;
-    padding: 10px;
-    transition: all .05s ease;
 }
 
 #introduce {

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Booking - Cova Travel</title>
+        <link rel="stylesheet" href="/Src/Global/travel.css">
+        <link rel="stylesheet" href="/Src/CSS/CovaTravel/booking.css">
+
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+        </style>
+
+        <audio src="/Assets/Music/bg-music.mp3" id="bgMusic"></audio>
+    </head>
+    <body>
+        <div id="loginBlock">
+            <img src="/Assets/Icons/covatravel.png" alt="Logo">
+            <h1>Log in required</h1>
+            <p>To use Cova Travel, you need to have a logged in Cova account</p>
+            <a href="/Src/Pages/CovaSoft/login-signup.html">Login now</a>
+        </div>
+
+        <header>
+            <img src="/Assets/Icons/covatravel.png" alt="Logo">
+            <ul>
+                <li onclick="golink('/Src/Pages/CovaTravel/')"><i class="fa-solid fa-house"></i>Home</li>
+                <li><i class="fa-solid fa-cloud-sun"></i>Weather</li>
+                <li onclick="golink('/Src/Pages/CovaTravel/flights.html')"><i class="fa-solid fa-plane-departure"></i>Flights</li>
+                <li onclick="golink('/Src/Pages/CovaTravel/booking.html')"><i class="fa-solid fa-bed"></i>Hotels</li>
+                <li><i class="fa-solid fa-city"></i>Cities</li>
+            </ul>
+        </header>
+
+        <div id="main">
+            <div id="img"></div>
+            <div id="content">
+                <input id="cityName" type="text" placeholder="City name">
+                <input id="countryName" type="text" placeholder="Country">
+                <button id="submit" class="btn">Find</button>
+
+                <div id="result">
+                    <p name="hotel">Hotel name:</p>
+                    <p name="link">Booking link:</p>
+                    <p name="rating">Rating:</p>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>©2023 Coval Travel by <a href="/Src/Pages/CovaSoft/">CovaSoft</a></p>
+        </footer>
+
+        <script src="/Src/Global/travel.js"></script>
+        <script src="/Src/Global/glo.js"></script>
+        <script src="/Src/JS/CovaTravel/booking.js"></script>
+        <script crossorigin='anonymous' src='https://kit.fontawesome.com/56c3238a0e.js'></script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    </body>
+</html>
