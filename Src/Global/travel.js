@@ -1,7 +1,4 @@
 const userData = JSON.parse(localStorage.getItem("Account"));
-const music = new Audio("/Assets/Music/bg-music.mp3");
-music.volume = 0.15;
-music.loop = true;
 
 if (userData != undefined) {
     document.getElementById("loginBlock").remove();
@@ -15,11 +12,13 @@ function delay(s) {
     return new Promise(resolve => setTimeout(resolve, s * 1000 || DEF_DELAY));
 }
 
-async function playAudio() {
-    await delay(1)
-    
-    
-    music.play();
-};
+let music = document.createElement("audio");
+music.setAttribute("src", "/Assets/Music/bg-music.mp3");
 
-playAudio();
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelector("body").appendChild(music);
+    music.style.display = "none";
+    music.autoplay = true;
+    music.loop = true;
+    music.play();
+})

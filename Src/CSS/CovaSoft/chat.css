@@ -18,6 +18,7 @@
     box-shadow: var(--shadow);
     max-width: 60%;
     transition: all .5s ease;
+    white-space: wrap;
 }
 #main > #chatArea p.user {
     background-color: var(--tertiary-color);

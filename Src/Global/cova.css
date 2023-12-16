@@ -34,6 +34,10 @@ body * {
 ::-webkit-scrollbar {
     background-color: var(--tertiary-color);
     width: 15px;
+    border-radius: 10px;
+}
+body::-webkit-scrollbar {
+    border-radius: 0px;
 }
 ::-webkit-scrollbar-thumb {
     background-color: var(--primary-color);
@@ -87,6 +91,12 @@ h2 {
 }
 h1 {
     font-size: calc(var(--default-ft-sz) + 12px);
+}
+hr {
+    border: none;
+    height: 4px;
+    background-color: var(--primary-color);
+    margin: 60px 0;
 }
 
 div.tag-list span {

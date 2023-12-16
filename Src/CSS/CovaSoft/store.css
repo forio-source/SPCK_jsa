@@ -1,8 +1,3 @@
-#main {
-    padding: 60px 80px;
-    display: flex;
-    align-items: center;
-}
 #left-sidebar-outer {
     width: 340px;
     position: fixed;
@@ -90,4 +85,49 @@
 }
 #left-sidebar-outer > #left-sidebar > ul#list > li#onChoosing:hover > i {
     color: var(--main-color);
+}
+
+div#lists {
+    padding: 60px;
+}
+div#lists > div {
+    padding-bottom: 12px;
+    display: flex;
+    align-items: center;
+    overflow-x: scroll;
+    margin-bottom: 100px;
+}
+div#lists > div > div {
+    padding: 15px;
+    border-radius: var(--bdr-rad);
+    cursor: pointer;
+    width: 190px;
+}
+div#lists > div > div > div.img {
+    aspect-ratio: 1/1;
+    width: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+div#lists > div > div > div.content > h3 {
+    margin-bottom: 5px;
+}
+div#lists > div > div > div.content > span {
+    width: 100%;
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    line-height: 1.6;
+}
+div#lists > div > div > div.content > span::before {
+    content: "\f005";
+    font-family: "Font Awesome 6 Free";
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+div#lists > div > div:hover {
+    background-color: var(--tertiary-color);
+    box-shadow: var(--shadow);
 }

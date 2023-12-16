@@ -1,0 +1,28 @@
+#wrapper {
+    padding: 110px 120px;
+}
+#wrapper > #contact {
+    display: grid;
+    grid-template:
+    "name email"
+    "textarea textarea"
+    "submit submit";
+    grid-template-rows: auto 140px;
+    grid-gap: 15px;
+}
+#wrapper > #contact > input, #wrapper > #contact > textarea {
+    padding: 15px 20px;
+}
+#wrapper > #contact > textarea {
+    width: 100%;
+    grid-area: textarea;
+}
+#wrapper > #contact > input[type="text"] {
+    grid-area: name;
+}
+#wrapper > #contact > input[type="email"] {
+    grid-area: email;
+}
+#wrapper > #contact > button {
+    grid-area: submit;
+}

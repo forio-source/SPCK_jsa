@@ -3,9 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Login - Cova Dictionary</title>
+        <title>CovaSoft</title>
         <link rel="stylesheet" href="/Src/Global/cova.css">
-        <link rel="stylesheet" href="/Src/CSS/CovaSoft/login-signup.css">
+        <link rel="stylesheet" href="/Src/CSS/CovaSoft/contact.css">
         <link rel="icon" type="image/x-icon" href="/Assets/Icons/icon.jpg">
 
         <style>
@@ -28,30 +28,25 @@
                 </li>
                 <li title="Contact us" onclick="golink('/Src/Pages/CovaSoft/contact.html')"><i class="fa-solid fa-envelope"></i></li>
                 <li title="Premium" onclick="golink('/Src/Pages/CovaSoft/pack.html')"><i class="fa-solid fa-crown"></i></li>
-                <li id="account" onclick="golink('/Src/Pages/login-signup.html')"><h6 style="margin: 0 10px 0 0;">Log in</h6><i class="fa-solid fa-arrow-right-to-bracket"></i></i></li>
+                <li id="account" onclick="golink('/Src/Pages/CovaSoft/login-signup.html')"><h6 style="margin: 0 10px 0 0;">Log in</h6><i class="fa-solid fa-arrow-right-to-bracket"></i></i></li>
             </ul>
         </header>
 
         <div id="wrapper">
-            <form class="section" id="loginForm" style="display: block;">
-                <h1>Login</h1>
-                <input class="email" type="email" placeholder="Email">
-                <input id="password" type="password" placeholder="Password">
-                <a href="javascript:void(0)">Create a new account</a>
-                <button class="submit btn">Submit</button>
-            </form>
-            <form class="section" id="signupForm" style="display: none;">
-                <h1>Signup</h1>
-                <input class="email" type="email" placeholder="Email">
-                <input id="password1" type="password" placeholder="Password">
-                <input id="password2" type="password" placeholder="Repeat password">
-                <a href="javascript:void(0)">Login to your account</a>
-                <button class="submit btn">Submit</button>
+            <form id="contact">
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Email">
+                <textarea placeholder="Message"></textarea>
+                <button class="btn" type="submit">Send</button>
             </form>
         </div>
 
+        <footer>
+            <p>©2023 CovaSoft corporation</p>
+        </footer>
+
         <script src="/Src/Global/glo.js"></script>
-        <script src="/Src/JS/CovaSoft/login-signup.js"></script>
+        <script src="/Src/JS/CovaSoft/contact.js"></script>
         <script crossorigin='anonymous' src='https://kit.fontawesome.com/56c3238a0e.js'></script>
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
