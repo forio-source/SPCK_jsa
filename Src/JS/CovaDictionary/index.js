@@ -78,7 +78,7 @@ save.addEventListener("click", function() {
         };
     } else {
         if (confirm("You cannot save when you don't have any account. Wanna create an account?")) {
-            location = "/Src/Pages/index.html"
+            location = "/Src/Pages/CovaDictionary/login-signup.html"
         };
     };
 });

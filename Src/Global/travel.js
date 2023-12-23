@@ -8,16 +8,12 @@ else {
     document.querySelector("body").style.overflow = "hidden";
 };
 
-function delay(s) {
-    return new Promise(resolve => setTimeout(resolve, s * 1000 || DEF_DELAY));
-}
-
-let music = document.createElement("audio");
-music.setAttribute("src", "/Assets/Music/bg-music.mp3");
-
 document.addEventListener("DOMContentLoaded", () => {
+    let music = document.createElement("audio");
     document.querySelector("body").appendChild(music);
+    music.setAttribute("src", "/Assets/Music/bg-music.mp3");
     music.style.display = "none";
+    music.volume = 0.25;
     music.autoplay = true;
     music.loop = true;
     music.play();

@@ -4,7 +4,7 @@ const list = document.getElementById("list");
 const btns = list.getElementsByTagName("button");
 
 if (localStorage.getItem("Account") == undefined || account.covaDictionaryLogedin == false) {
-    location = "/Src/Pages/account.html"
+    location = "/Src/Pages/CovaDictionary/account.html"
 }
 
 if (saved != undefined && saved.length > 0) {

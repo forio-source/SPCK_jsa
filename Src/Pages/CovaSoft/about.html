@@ -6,7 +6,7 @@
         <title>CovaSoft</title>
         <link rel="stylesheet" href="/Src/Global/cova.css">
         <link rel="stylesheet" href="/Src/CSS/CovaSoft/about.css">
-        <link rel="icon" type="image/x-icon" href="/Assets/Icons/icon.jpg">
+        <link rel="icon" type="image/x-icon" href="/Assets/Icons/icon.png">
 
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
@@ -16,19 +16,11 @@
         <header>
             <img src="/Assets/Icons/logo.png" alt="Logo">
             <ul>
-                <li title="Home" onclick="golink('/Src/Pages/CovaSoft/')"><i class="fa-solid fa-house"></i></li>
-                <li title="About us" onclick="golink('/Src/Pages/CovaSoft/about.html')"><i class="fa-solid fa-circle-info"></i></li>
-                <li title="Our products" style="font-size: 30px;"><ion-icon name="albums"></ion-icon></li>
-                <li title="Cova Store" onclick="golink('/Src/Pages/CovaSoft/store.html')"><i class="fa-solid fa-bag-shopping"></i></li>
-                <li title="Cova assistant" onclick="golink('/Src/Pages/CovaSoft/chat.html')" id="chat">
-                    <span>
-                        <i class="fa-regular fa-square"></i>
-                        <i class="fa-regular fa-square top" style="transform: rotateZ(45deg);"></i>
-                    </span>
-                </li>
-                <li title="Contact us" onclick="golink('/Src/Pages/CovaSoft/contact.html')"><i class="fa-solid fa-envelope"></i></li>
-                <li title="Premium" onclick="golink('/Src/Pages/CovaSoft/pack.html')"><i class="fa-solid fa-crown"></i></li>
-                <li id="account" onclick="golink('/Src/Pages/CovaSoft/login-signup.html')"><h6 style="margin: 0 10px 0 0;">Log in</h6><i class="fa-solid fa-arrow-right-to-bracket"></i></i></li>
+                <li data-visible="" onclick="golink('/Src/Pages/CovaSoft/')">Trang chủ</li>
+                <li data-visible="chat.html" onclick="golink('/Src/Pages/CovaSoft/chat.html')">Altis AI</li>
+                <li>Workspace</li>
+                <li data-visible="store.html" onclick="golink('/Src/Pages/CovaSoft/store.html')">Cửa hàng</li>
+                <li id="account" data-visible="account.html" onclick="golink('/Src/Pages/CovaSoft/login-signup.html')"><h6 style="margin: 0 10px 0 0;">Đăng nhập</h6><i class="fa-solid fa-arrow-right-to-bracket"></i></i></li>
             </ul>
         </header>
 
@@ -55,7 +47,7 @@
             <h1>AI age is coming</h1>
             <hr>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi reiciendis fugiat sapiente consequuntur alias consectetur quos ipsum ducimus hic maxime nisi facilis, accusantium reprehenderit necessitatibus aliquid doloremque dolore facere incidunt!</p>
-            <button class="btn" onclick="golink('/Src/Pages/CovaSoft/chat.html')">Try Cova assistant</button>
+            <button class="btn" onclick="golink('/Src/Pages/CovaSoft/chat.html')">Try Cova Assistant</button>
             <h1>Make your life better and easier with a little help from our products</h1>
             <button class="btn" style="margin-left: calc(50% - (170.53px / 2));" onclick="golink('/Src/Pages/CovaSoft/chat.html')">Take a look</button>
         </div>

@@ -1,60 +1,115 @@
 #banner {
-    text-align: center;
-    background: url(/Assets/Images/banner3.jpg) no-repeat center fixed;
-    background-size: cover;
     width: 100%;
-    height: calc(100vh - 90px);
+    height: calc(100vh - 70px);
+    padding: 40px;
+}
+#banner > ul {
+    width: 100%;
+    margin-bottom: 15px;
+    height: 42px;
+    display: flex;
+}
+#banner > ul > li {
+    padding: 10px 20px;
+    height: 100%;
+    border-radius: 50px;
+    background-color: white;
+    color: var(--title-color);
+    cursor: pointer;
+    box-shadow: var(--low-shadow);
+    user-select: none;
+}
+#banner > ul > li#active {
+    background-color: var(--main-color);
+    color: white;
+}
+#banner > ul > li + li {
+    margin-left: 5px;
+}
+#banner > ul > li:hover {
+    background-color: var(--lt-main-color);
+    color: var(--main-color);
+    box-shadow: var(--shadow);
+    transform: translateY(-2px);
+}
+#banner > ul > li:active {
+    background-color: var(--lt-main-color);
+    color: var(--main-color);
+    box-shadow: 0 1px 2px 0 #0003;
+    transform: none;
 }
 #banner > div {
-    background: linear-gradient(to bottom, rgba(11, 25, 43, 0.5) 60%, rgba(11, 25, 43, 0.6) 70%, rgba(11, 25, 43, 0.9) 90%, rgba(11, 25, 43, 1) 100%) ;
+    border-radius: var(--bdr-rad);
+    background: linear-gradient(to right bottom, lightgray, slategray);
     width: 100%;
+    height: calc(100% - 57px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#banner > div > div {
+    padding: 50px;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-#banner h1 {
-    color: white;
-    font-size: calc(var(--default-ft-sz) + 25px);
-    height: fit-content;
-}
-.section-wrapper {
-    padding: 60px 120px;
-}
-.section-wrapper#quote {
-    display: flex;
+#banner > div > div.left {
+    width: 60%;
     flex-direction: column;
-    align-items: center;
 }
-.section-wrapper#quote > div#icon {
-    background: url(/Assets/Icons/ceo.jpg) center/cover;
-    border-radius: 50%;
-    aspect-ratio: 1/1;
-    height: 150px;
-    box-shadow: 0 10px 10px 0 #0005;
+#banner > div > div.left > h1, #banner > div > div.left > h1 > span {
+    margin: 0;
+    color: white;
 }
-.section-wrapper#quote > p {
-    font-size: calc(var(--default-ft-sz) + 5px);
-    position: relative;
+#banner > div > div.left > p {
+    color: white;
+    width: 80%;
+    max-width: 500px;
     text-align: center;
 }
-.section-wrapper#quote > p::before {
-    content: "\f10d";
-    font-weight: bold;
-    font-size: 25px;
-    font-family: "Font Awesome 6 Free";
-    position: absolute;
-    top: 10px;
-    left: -50px;
+#banner > div > div.right {
+    width: 40%;
 }
-.section-wrapper#quote > p::after {
-    content: "\f10e";
-    font-weight: bold;
-    font-size: 25px;
-    font-family: "Font Awesome 6 Free";
+#banner > div > div.right > img {
+    width: 70%;
+    max-width: 300px;
+}
+
+#workspaceEdu {
+    padding: 60px;
+    display: flex;
+    justify-content: center;
+}
+#workspaceEdu > div.content {
+    width: 55%;
+    padding-right: 80px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+#workspaceEdu > div.img {
+    width: 40%;
+    background: url(/Assets/Images/education.jpg) no-repeat;
+    background-size: cover;
+    background-position: 10%;
+    border-radius: var(--bdr-rad);
+    aspect-ratio: 6/5;
+    box-shadow: var(--shadow);
+    position: relative;
+}
+#workspaceEdu > div.img::after {
+    content: "";
+    aspect-ratio: 1/1;
+    height: 45%;
+    background: url(/Assets/Icons/covaworkspace-edu.png) center/cover no-repeat;
     position: absolute;
-    top: 10px;
-    right: -50px;
+    bottom: -10%;
+    left: -10%;
+}
+
+.section-wrapper {
+    padding: 60px 80px;
 }
 .section-wrapper#products {
     display: flex;
@@ -63,17 +118,16 @@
 }
 .section-wrapper#products > div {
     display: grid;
-    gap: 30px;
-    grid-template-columns: calc(50% - 15px) calc(50% - 15px);
+    gap: 20px;
+    grid-template-columns: calc(100% / 3 - (20px - (20px / 3))) calc(100% / 3 - (20px - (20px / 3))) calc(100% / 3 - (20px - (20px / 3)));
     margin-top: 60px;
     width: 100%;
 }
 .section-wrapper#products > h1 {
-    font-size: calc(var(--default-ft-sz) + 24px);
+    font-size: calc(var(--default-ft-sz) + 18px);
     text-align: center;
 }
 .section-wrapper#products > div > div {
-    background-color: var(--tertiary-color);
     border-radius: var(--bdr-rad);
     padding: 40px;
     height: 300px;
@@ -82,6 +136,7 @@
     overflow: hidden;
     user-select: none;
     position: relative;
+    background-color: white;
 }
 .section-wrapper#products > div > div:first-child {
     grid-column-start: 1;
@@ -90,49 +145,43 @@
 .section-wrapper#products > div > div:first-child::after {
     content: "Beta";
     padding: 10px 30px;
-    font-size: calc(var(--default-ft-sz) + 6px);
+    font-size: calc(var(--default-ft-sz) + 3px);
     color: white;
     background-color: var(--main-color);
     position: absolute;
     top: 0;
-    left: 156.28px;
-    border-radius: 0 0 var(--bdr-rad) 0;
-    box-shadow: 0 0 5px 2px #0002;
-}
-.section-wrapper#products > div > div:hover {
-    scale: 1.025;
-}
-.section-wrapper#products > div > div:active {
-    scale: 0.975;
-}
-.section-wrapper#products > div > div.premium::before {
-    content: "Premium";
-    padding: 10px 30px;
-    font-size: calc(var(--default-ft-sz) + 6px);
-    color: white;
-    background-color: goldenrod;
-    position: absolute;
-    top: 0;
     left: 0;
     border-radius: var(--bdr-rad) 0 var(--bdr-rad) 0;
-    box-shadow: 0 0 5px 2px #0002;
 }
-.section-wrapper#products > div > div.premium:first-child:before {
-    border-radius: var(--bdr-rad) 0 0 0;
+.section-wrapper#products > div > div.tagged::before {
+    padding: 10px 30px;
+    font-size: calc(var(--default-ft-sz) + 3px);
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 0 var(--bdr-rad) 0 var(--bdr-rad);
 }
-.section-wrapper#products > div > div > h1 {
+.section-wrapper#products > div > div.tagged.comingsoon::before {
+    content: "Comming soon";
+    background: linear-gradient(45deg, purple, red);
+}
+.section-wrapper#products > div > div:hover {
+    box-shadow: var(--high-shadow);
+    transform: translateY(-5px);
+}
+.section-wrapper#products > div > div:active {
+    box-shadow: var(--shadow);
+    transform: none;
+}
+.section-wrapper#products > div > div > h3 {
     margin-bottom: 0;
-    max-width: 75%;
 }
 .section-wrapper#products > div > div > p {
     margin-top: 0;
-    max-width: 50%;
 }
 .section-wrapper#products > div > div > img {
-    height: 200px;
-    position: absolute;
-    right: 40px;
-    bottom: -30px;
+    height: 90px;
 }
 .section-wrapper#products > div > div:first-child > img {
     height: calc(100% - 100px);

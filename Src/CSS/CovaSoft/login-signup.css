@@ -7,22 +7,20 @@
 #wrapper > #loginForm, #wrapper > #signupForm {
     width: 400px;
     padding: 50px;
-    background-color: var(--tertiary-color);
-    box-shadow: 0 0 15px 0 #0002;
+    background-color: #f7f7f7;
+    box-shadow: var(--high-shadow);
     border-radius: var(--bdr-rad);
 }
-#wrapper > #loginForm > h1, #wrapper > #signupForm > h1 {
-    font-size: calc(var(--default-ft-sz) + 25px);
+#wrapper > #loginForm > h2, #wrapper > #signupForm > h2 {
     margin-top: 0;
 }
 #wrapper > #loginForm > input, #wrapper > #signupForm > input {
     display: block;
     width: 100%;
-    font-size: calc(var(--default-ft-sz) + 2px);
     padding: 15px 20px;
     margin-bottom: 15px;
     border-radius: var(--bdr-rad);
-    box-shadow: var(--shadow);
+    box-shadow: var(--low-shadow);
 }
 #wrapper > #loginForm > a, #wrapper > #signupForm > a {
     display: block;
@@ -33,22 +31,5 @@
     font-size: var(--default-ft-sz);
 }
 #wrapper > #loginForm > button.submit, #wrapper > #signupForm > button.submit {
-    width: 70%;
-    font-size: var(--default-ft-sz);
-    padding: 15px;
-    font-size: calc(var(--default-ft-sz) + 2px);
     margin-top: 0;
-}
-#wrapper > #banner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: calc(100% - 550px);
-}
-#wrapper > #banner > h1 {
-    display: inline-block;
-    margin: 0;
-    font-size: calc(var(--default-ft-sz) + 40px);
-    user-select: none;
 }

@@ -19,7 +19,12 @@ function scrolling() {
 }
 
 if (document.querySelector('header > ul > li#account')) {
-    if (localStorage.getItem("Account")) {
+    let list = document.querySelector("header > ul");
+    let items = list.querySelectorAll("li");
+    let link = window.location.href;
+    link = link.split("/");
+
+    if (data) {
         let instance = document.querySelector('header > ul > li#account');
         let string = data.email;
         let emailName = string.split("@");
@@ -32,22 +37,27 @@ if (document.querySelector('header > ul > li#account')) {
             emailName = getEmail
         }
         
-        instance.setAttribute("onclick", "golink('/Src/Pages/account.html')")
+        instance.setAttribute("onclick", "golink('/Src/Pages/CovaSoft/account.html')")
         instance.style = "aspect-ratio: unset; padding: 5px 15px";
         instance.setAttribute("title", string);
         instance.querySelector("h6").innerText = emailName;
         instance.querySelector("h6").style.display = "initial";
         
-        instance.querySelector("i").classList.remove("fa-arrow-right-to-bracket");
-        instance.querySelector("i").classList.add("fa-circle-user");
+        instance.querySelector("i").remove();
+        let img = document.createElement("img");
+        img.setAttribute("src", data.avatar);
 
-        if (data.usingPack == "Premium") {
-            document.querySelector('li[title="Premium"] > i').style.color = "goldenrod"
-        }
+        instance.appendChild(img)
     };
+
+    for (let i = 0; i < items.length; i++) {
+        if (link[6] == items[i].dataset.visible) {
+            items[i].id = "currentPage";
+        }
+    }
 };
 if (document.querySelector('header > div#right > ul > li[title="Log in"]')) {
-    if (localStorage.getItem("Account") != undefined) {
+    if (data) {
         if (data.covaDictionaryLoggedin == true) {
             let instance = document.querySelector('header > div#right > ul > li[title="Log in"]');
             let string = data.email;
@@ -61,7 +71,7 @@ if (document.querySelector('header > div#right > ul > li[title="Log in"]')) {
                 emailName = getEmail
             }
             
-            instance.setAttribute("onclick", "golink('/Src/Pages/account.html')")
+            instance.setAttribute("onclick", "golink('/Src/Pages/CovaDictionary/account.html')")
             instance.style = "aspect-ratio: unset; padding: 5px 15px";
             instance.setAttribute("title", string);
             instance.querySelector("h6").innerText = emailName;

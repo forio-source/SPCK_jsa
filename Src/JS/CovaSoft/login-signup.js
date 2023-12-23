@@ -43,23 +43,24 @@ signup.addEventListener("submit", (e) => {
         let account = {
             email: values.Email,
             password: values.RePass,
-            usingPack: "Free",
             covaDictionaryLoggedin: false,
+            avatar: "/Assets/Icons/user.png",
         }
         localStorage.setItem("Account", JSON.stringify(account));
         login.style = "display: block";
         signup.style = "display: none";
     }
     else if (!emailDomains.some(i => values.Email.includes(i))) {
-        document.querySelector("form#signupForm > input.email").style.backgroundColor = "rgb(150, 50, 50)"
-        alert("Invaild email")
+        document.querySelector("form#signupForm > input.email").style.backgroundColor = "rgb(255, 150, 150)";
+        alert("Địa chỉ Email không chính xác");
     }
     else if (values.Pass.length < 6) {
-        document.querySelector("form#signupForm > input#password1").style.backgroundColor = "rgb(150, 50, 50)"
-        alert("Your password is shorter than 6 symbol")
+        document.querySelector("form#signupForm > input#password1").style.backgroundColor = "rgb(255, 150, 150)";
+        alert("Mật khẩu phải dài hơn 6 ký tự");
     }
     else if (values.Pass != values.RePass) {
-        document.querySelector("form#signupForm > input#password2").style.backgroundColor = "rgb(150, 50, 50)"
+        document.querySelector("form#signupForm > input#password2").style.backgroundColor = "rgb(255, 150, 150)";
+        alert("Mật khẩu không khớp");
     }
 });
 

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>CovaSoft</title>
+        <title>Cửa hàng CovaSoft Store</title>
         <link rel="stylesheet" href="/Src/Global/cova.css">
         <link rel="stylesheet" href="/Src/CSS/CovaSoft/store.css">
-        <link rel="icon" type="image/x-icon" href="/Assets/Icons/icon.jpg">
+        <link rel="icon" type="image/x-icon" href="/Assets/Icons/icon.png">
 
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
@@ -16,76 +16,196 @@
         <header>
             <img src="/Assets/Icons/logo.png" alt="Logo">
             <ul>
-                <li title="Home" onclick="golink('/Src/Pages/CovaSoft/')"><i class="fa-solid fa-house"></i></li>
-                <li title="About us" onclick="golink('/Src/Pages/CovaSoft/about.html')"><i class="fa-solid fa-circle-info"></i></li>
-                <li title="Our products" style="font-size: 30px;"><ion-icon name="albums"></ion-icon></li>
-                <li title="Cova Store" onclick="golink('/Src/Pages/CovaSoft/store.html')"><i class="fa-solid fa-bag-shopping"></i></li>
-                <li title="Cova assistant" onclick="golink('/Src/Pages/CovaSoft/chat.html')" id="chat">
-                    <span>
-                        <i class="fa-regular fa-square"></i>
-                        <i class="fa-regular fa-square top" style="transform: rotateZ(45deg);"></i>
-                    </span>
-                </li>
-                <li title="Contact us" onclick="golink('/Src/Pages/CovaSoft/contact.html')"><i class="fa-solid fa-envelope"></i></li>
-                <li title="Premium" onclick="golink('/Src/Pages/CovaSoft/pack.html')"><i class="fa-solid fa-crown"></i></li>
-                <li id="account" onclick="golink('/Src/Pages/CovaSoft/login-signup.html')"><h6 style="margin: 0 10px 0 0;">Log in</h6><i class="fa-solid fa-arrow-right-to-bracket"></i></i></li>
+                <li data-visible="" onclick="golink('/Src/Pages/CovaSoft/')">Trang chủ</li>
+                <li data-visible="chat.html" onclick="golink('/Src/Pages/CovaSoft/chat.html')">Altis AI</li>
+                <li>Workspace</li>
+                <li data-visible="store.html" onclick="golink('/Src/Pages/CovaSoft/store.html')">Cửa hàng</li>
+                <li id="account" data-visible="account.html" onclick="golink('/Src/Pages/CovaSoft/login-signup.html')"><h6 style="margin: 0 10px 0 0;">Đăng nhập</h6><i class="fa-solid fa-arrow-right-to-bracket"></i></i></li>
             </ul>
         </header>
 
         <div id="left-sidebar-outer">
             <div id="left-sidebar">
-                <input type="text" name="" id="search" placeholder="Search">
+                <input type="text" name="" id="search" placeholder="Tìm kiếm ứng dụng">
                 <ul id="list">
-                    <li id="onChoosing"><i class="fa-solid fa-bars"></i>All</li>
-                    <li><i class="fa-solid fa-paintbrush"></i>Art</li>
-                    <li><i class="fa-solid fa-globe"></i>Browser</li>
-                    <li><i class="fa-solid fa-code"></i>Coding</li>
-                    <li><i class="fa-solid fa-comments"></i>Connect</li>
-                    <li><i class="fa-solid fa-shapes"></i>Education & Knowledge</li>
-                    <li class="notification"><i class="fa-solid fa-clapperboard"></i>Entertainment</li>
-                    <li><i class="fa-solid fa-folder"></i>Manager</li>
-                    <li><i class="fa-solid fa-music"></i>Music</li>
-                    <li><i class="fa-solid fa-newspaper"></i>News</li>
-                    <li><i class="fa-solid fa-shield"></i>Security</li>
-                    <li><i class="fa-solid fa-tag"></i>Shopping</li>
-                    <li class="notification"><i class="fa-solid fa-boxes-stacked"></i>Packs</li>
-                    <li><i class="fa-solid fa-image"></i>Photo editor</li>
-                    <li><i class="fa-solid fa-wallet"></i>Wallet & Money</li>
-                    <li><i class="fa-solid fa-briefcase"></i>Work & Business</li>
-                    <li><i class="fa-solid fa-bolt" style="color: rgb(93, 193, 226);"></i>Free</li>
-                    <li><i class="fa-solid fa-crown" style="color: goldenrod;"></i>Premium</li>
-                    <li><i class="fa-solid fa-money-bill" style="color: rgb(79, 199, 85);"></i>Paid</li>
-                    <li><i class="fa-solid fa-hand-holding-dollar" style="color: gold;"></i>Premium + Paid</li>
-                    <li><i class="fa-solid fa-ellipsis"></i>Others</li>
+                    <li id="onChoosing"><i class="fa-solid fa-bars"></i>Tất cả</li>
+                    <li><i class="fa-solid fa-paintbrush"></i>Nghệ thuật</li>
+                    <li><i class="fa-solid fa-globe"></i>Trình duyệt</li>
+                    <li><i class="fa-solid fa-comments"></i>Kết nối</li>
+                    <li><i class="fa-solid fa-shapes"></i>Giáo dục</li>
+                    <li class="notification"><i class="fa-solid fa-clapperboard"></i>Giải trí</li>
+                    <li class="notification"><i class="fa-solid fa-circle-plus"></i>Phần bổ trợ</li>
+                    <li><i class="fa-solid fa-dice"></i>Trò chơi</li>
+                    <li><i class="fa-solid fa-music"></i>Nhạc</li>
+                    <li><i class="fa-solid fa-newspaper"></i>Tin tức</li>
+                    <li><i class="fa-solid fa-shield"></i>Bảo mật</li>
+                    <li><i class="fa-solid fa-tag"></i>Mua sẳm</li>
+                    <li><i class="fa-solid fa-pen"></i>Chỉnh sửa</li>
+                    <li><i class="fa-solid fa-wallet"></i>Quản lý tiền</li>
+                    <li><i class="fa-solid fa-briefcase"></i>Công việc</li>
+                    <li><i class="fa-solid fa-bolt" style="color: rgb(93, 193, 226);"></i>Miễn phí</li>
+                    <li><i class="fa-solid fa-crown" style="color: goldenrod;"></i>Cao cấp</li>
+                    <li><i class="fa-solid fa-money-bill" style="color: rgb(79, 199, 85);"></i>Trả tiền</li>
+                    <li><i class="fa-solid fa-hand-holding-dollar" style="color: gold;"></i>Cao cấp + Trả tiền</li>
+                    <li><i class="fa-solid fa-ellipsis"></i>Khác</li>
                 </ul>
             </div>
         </div>
 
-        <div id="lists">
-            <h1>For business</h1>
-            <div>
+        <div id="main">
+            <div class="banner" id="download" >
+                <div class="left">
+                    <h1>Nhận CovaSoft Store ngay</h1>
+                    <div>
+                        <button class="btn"><i class="fa-brands fa-android"></i> Android</button><button class="btn"><i class="fa-brands fa-windows"></i> Windows</button><button class="btn"><i class="fa-solid fa-cube"></i> Cubik OS</button>
+                    </div>
+                </div>
+                <div class="right">
+                    <img src="/Assets/Icons/covasoft-store.png" alt="">
+                </div>
+            </div>
+
+            <h1>Được tải nhiều nhất<i class="fa-solid fa-angle-right"></i></h1>
+            <div class="list">
                 <div>
-                    <div class="img" style="background-image: url('/Assets/Icons/covaworkspace.png');"></div>
+                    <div class="img">
+                        <img src="https://1.bp.blogspot.com/-S8HTBQqmfcs/XN0ACIRD9PI/AAAAAAAAAlo/FLhccuLdMfIFLhocRjWqsr9cVGdTN_8sgCPcBGAYYCw/s1600/f_logo_RGB-Blue_1024.png" alt="">
+                    </div>
                     <div class="content">
-                        <h3>Cova Workspace</h3>
+                        <h4>Facebook</h4>
+                        <span>4.3</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="img">
+                        <img src="https://th.bing.com/th/id/R.fb15593855bbf2beb3490645bc597f3a?rik=SknI2kTU0zqdrA&riu=http%3a%2f%2fuhu.es%2fsites%2fdefault%2ffiles%2f2022-11%2flogoTikTok_256x256px.png&ehk=YxwCx6osTRkGDX%2fx37u7Kr%2faCQ1gWNHpey5%2b7LtfveE%3d&risl=&pid=ImgRaw&r=0" alt="">
+                    </div>
+                    <div class="content">
+                        <h4>TikTok</h4>
+                        <span>3.9</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="img">
+                        <img src="https://th.bing.com/th/id/R.9e3a0cfc30081f5e6d489045cc3a299a?rik=F%2bdDHvW0hSu37Q&riu=http%3a%2f%2fwww.classicstogo.nl%2ffiles%2f2018%2f04%2fSpotify_logo.png&ehk=qJeakQZiQiSqteSMYuTAKkfTAbvt4%2bHdoelNFQfRKTk%3d&risl=&pid=ImgRaw&r=0" alt="">
+                    </div>
+                    <div class="content">
+                        <h4>Spotify</h4>
+                        <span>4.2</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="img">
+                        <img src="https://static.semrush.com/power-pages/media/favicons/instagram-com-favicon-b407fa10.png" alt="">
+                    </div>
+                    <div class="content">
+                        <h4>Instagram</h4>
+                        <span>4.4</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="img">
+                        <img src="https://dsagencyny.com/wp-content/uploads/2021/10/1.png" alt="">
+                    </div>
+                    <div class="content">
+                        <h4>Gmail</h4>
                         <span>3.6</span>
                     </div>
                 </div>
-            </div>
-            <h1>Into the music world!</h1>
-            <div>
                 <div>
-                    <div class="img" style="background-image: url('https://th.bing.com/th/id/R.3343b6ee3182287d4bfd0e50cf5e9dde?rik=aFWXMy4Fo%2fe7Xg&riu=http%3a%2f%2fimg.talkandroid.com%2fuploads%2f2016%2f01%2fspotify-app-logo.png&ehk=TuoyNsQpRFePInKyeFPQ4XHrkO8hcANQDw3upG0LzTM%3d&risl=&pid=ImgRaw&r=0');"></div>
+                    <div class="img">
+                        <img src="/Assets/Icons/covaplus.png" alt="">
+                    </div>
                     <div class="content">
-                        <h3>Spotify</h3>
-                        <span>4.1</span>
+                        <h4>Cova Plus</h4>
+                        <span>4.0</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="banner" id="workspace" >
+                <div class="left">
+                    <h1>Làm việc thật thông minh</h1>
+                    <div>
+                        <button class="btn">Thử Cova Workspace ngay <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <div class="right">
+                    <img src="/Assets/Icons/covaworkspace.png" alt="">
+                </div>
+            </div>
+
+            <h1>Đắm mình trong thế giới âm nhạc<i class="fa-solid fa-angle-right"></i></h1>
+            <div class="list">
+                <div>
+                    <div class="img">
+                        <img src="https://th.bing.com/th/id/R.9e3a0cfc30081f5e6d489045cc3a299a?rik=F%2bdDHvW0hSu37Q&riu=http%3a%2f%2fwww.classicstogo.nl%2ffiles%2f2018%2f04%2fSpotify_logo.png&ehk=qJeakQZiQiSqteSMYuTAKkfTAbvt4%2bHdoelNFQfRKTk%3d&risl=&pid=ImgRaw&r=0" alt="">
+                    </div>
+                    <div class="content">
+                        <h4>Spotify</h4>
+                        <span>4.2</span>
                     </div>
                 </div>
                 <div>
-                    <div class="img" style="background-image: url('/Assets/Icons/rilimusic.png');"></div>
+                    <div class="img">
+                        <img src="/Assets/Icons/musicriver.png" alt="">
+                    </div>
                     <div class="content">
-                        <h3>Rili Music</h3>
-                        <span>3.9</span>
+                        <h4>Music River</h4>
+                        <span>3.4</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="img">
+                        <img src="https://th.bing.com/th/id/R.4bfc9ea11d7a0e8e361705c9cf53e5e1?rik=aHPD%2fAdjcJGlTQ&pid=ImgRaw&r=0" alt="">
+                    </div>
+                    <div class="content">
+                        <h4>Deezer</h4>
+                        <span>3.8</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="img">
+                        <img src="https://th.bing.com/th/id/R.36b0cceffd0cdd00a51541b8cdd819fe?rik=rtlkAvb7yrvLLw&pid=ImgRaw&r=0" alt="">
+                    </div>
+                    <div class="content">
+                        <h4>TuneIn Radio</h4>
+                        <span>4.3</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="img">
+                        <img src="https://cdn.icon-icons.com/icons2/1945/PNG/512/iconfinder-soundcloud-4661625_122489.png" alt="">
+                    </div>
+                    <div class="content">
+                        <h4>SoundCloud</h4>
+                        <span>4.4</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="img">
+                        <img src="/Assets/Icons/clipmusic.png" alt="">
+                    </div>
+                    <div class="content">
+                        <h4>ClipMusic</h4>
+                        <span>3.7</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="banner game-banner" id="forza">
+                <div>
+                    <img src="https://cdn2.steamgriddb.com/logo_thumb/09fe5887fc4fe16467e9707b5d7ef0a7.png" alt="">
+                    <div>
+                        <button class="btn">Miễn phí với Game Box</button><span style="color: white; margin: 0 15px; font-size: calc(var(--default-ft-sz) + 2px);">hoặc</span><button class="btn">2.199.000 đ</button>
+                    </div>
+                </div>
+            </div>
+            <div class="banner game-banner new" id="wfs">
+                <div>
+                    <img src="/Assets/Icons/wfs.png" alt="">
+                    <div>
+                        <button class="btn">Miễn phí với Game Box</button><span style="color: white; margin: 0 15px; font-size: calc(var(--default-ft-sz) + 2px);">hoặc</span><button class="btn">1.749.000 đ</button>
                     </div>
                 </div>
             </div>

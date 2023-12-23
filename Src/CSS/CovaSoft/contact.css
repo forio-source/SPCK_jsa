@@ -10,9 +10,6 @@
     grid-template-rows: auto 140px;
     grid-gap: 15px;
 }
-#wrapper > #contact > input, #wrapper > #contact > textarea {
-    padding: 15px 20px;
-}
 #wrapper > #contact > textarea {
     width: 100%;
     grid-area: textarea;

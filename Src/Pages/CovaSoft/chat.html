@@ -3,10 +3,10 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Cova assistant - CovaSoft</title>
+        <title>Altis AI - CovaSoft</title>
         <link rel="stylesheet" href="/Src/Global/cova.css">
         <link rel="stylesheet" href="/Src/CSS/CovaSoft/chat.css">
-        <link rel="icon" type="image/x-icon" href="/Assets/Icons/icon.jpg">
+        <link rel="icon" type="image/x-icon" href="/Assets/Icons/altisai.png">
 
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
@@ -16,62 +16,65 @@
         <header>
             <img src="/Assets/Icons/logo.png" alt="Logo">
             <ul>
-                <li title="Home" onclick="golink('/Src/Pages/CovaSoft/')"><i class="fa-solid fa-house"></i></li>
-                <li title="About us" onclick="golink('/Src/Pages/CovaSoft/about.html')"><i class="fa-solid fa-circle-info"></i></li>
-                <li title="Our products" style="font-size: 30px;"><ion-icon name="albums"></ion-icon></li>
-                <li title="Cova Store" onclick="golink('/Src/Pages/CovaSoft/store.html')"><i class="fa-solid fa-bag-shopping"></i></li>
-                <li title="Cova assistant" onclick="golink('/Src/Pages/CovaSoft/chat.html')" id="chat">
-                    <span>
-                        <i class="fa-regular fa-square"></i>
-                        <i class="fa-regular fa-square top" style="transform: rotateZ(45deg);"></i>
-                    </span>
-                </li>
-                <li title="Contact us" onclick="golink('/Src/Pages/CovaSoft/contact.html')"><i class="fa-solid fa-envelope"></i></li>
-                <li title="Premium" onclick="golink('/Src/Pages/CovaSoft/pack.html')"><i class="fa-solid fa-crown"></i></li>
-                <li id="account" onclick="golink('/Src/Pages/CovaSoft/login-signup.html')"><h6 style="margin: 0 10px 0 0;">Log in</h6><i class="fa-solid fa-arrow-right-to-bracket"></i></i></li>
+                <li data-visible="" onclick="golink('/Src/Pages/CovaSoft/')">Trang chủ</li>
+                <li data-visible="chat.html" onclick="golink('/Src/Pages/CovaSoft/chat.html')">Altis AI</li>
+                <li>Workspace</li>
+                <li data-visible="store.html" onclick="golink('/Src/Pages/CovaSoft/store.html')">Cửa hàng</li>
+                <li id="account" data-visible="account.html" onclick="golink('/Src/Pages/CovaSoft/login-signup.html')"><h6 style="margin: 0 10px 0 0;">Đăng nhập</h6><i class="fa-solid fa-arrow-right-to-bracket"></i></i></li>
             </ul>
         </header>
 
         <div id="introduce">
-            <div class="tag-list">
-                <span class="premium">Premium</span>
-                <span>Purchase with Cova premium</span>
-            </div>
-            
-            <span style="font-size: 100px; text-align: center; position: relative; display: block; margin-top: 80px;">
-                <i class="fa-regular fa-square"></i>
-                <i class="fa-regular fa-square top" style="position: absolute; transform: rotateZ(45deg) translate(-52px, 72px);"></i>
-            </span>
-            <h1 style="font-size: 50px; text-align: center; margin: 0 0 230px;">Cova assistant</h1>
-            <h1><i class="fa-solid fa-object-group"></i>Designed for you</h1>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias fuga porro quisquam doloribus animi officiis quas! Omnis dicta exercitationem maiores veritatis nobis aliquam minima laborum sapiente obcaecati cupiditate, maxime officia? Distinctio, hic! Dolorum repellat autem ducimus cupiditate debitis, corrupti odio ab unde, sapiente, dolorem consequatur perspiciatis provident. Suscipit, eligendi vel.</p>
-            <h1><i class="fa-regular fa-star"></i>Aim to your experience</h1>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi obcaecati voluptate maxime dolore autem placeat voluptatum vel nobis facilis iusto impedit atque eligendi sequi soluta, repellat quia provident in alias! Laborum voluptatem fugit est labore nulla sunt, quasi, adipisci, incidunt laboriosam corporis omnis minima? Doloribus necessitatibus dolore placeat distinctio libero, ex hic quia temporibus optio, alias, sed illum. Quia consequuntur recusandae, sequi repellendus sapiente blanditiis ducimus enim cum corrupti, adipisci quasi beatae veritatis. Quis incidunt rem doloremque delectus veniam a!</p>
-            <h1><i class="fa-solid fa-comments"></i>Easy to use!</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab id, asperiores eius doloremque sint accusamus obcaecati vel facilis molestiae natus soluta mollitia veritatis fugit aliquid voluptatibus nobis illum modi. Nemo quod quasi doloremque a reiciendis aut dolorem quisquam itaque animi?</p>
-            <button class="btn" onclick="golink('/Src/Pages/CovaSoft/pack.html')" style="margin-top: 80px;"><i class="fa-solid fa-crown" style="margin-right: 10px;"></i>Upgrade to use</button>
-
-            <div id="apis">
-                <h1>Using APIs</h1>
-                <div id="list">
-                    <div>
-                        <img src="https://rapidapi-prod-apis.s3.amazonaws.com/f034beb5-f477-45c6-ae76-add5e43d0061.jpg" alt="">
-                        <h4>OPEN AI</h4>
-                    </div>
+            <div id="wrapper">
+                <div id="left">
+                    <img src="/Assets/Icons/altisai.png" alt="">
+                </div>
+                <div id="right">
+                    <h1>Altis AI</h1>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto, architecto!</p>
+                    <button class="btn" onclick="golink('/Src/Pages/CovaSoft/login-signup.html')">Đăng nhập để sử dụng</button>
                 </div>
             </div>
         </div>
 
         <div id="main">
-            <div id="chatArea">
+            <div id="voiceMenu">
+                <div>
+                    <h4>Speak voice</h4>
+                    <div class="select-wrapper">
+                        <select id="voice" onchange="voiceChange()">
+                            <option value="">None</option>
+                            <optgroup label="Male">
+                                <option value="male-jack">Jack</option>
+                                <option value="male-john">John</option>
+                                <option value="male-maxwell">Maxwell</option>
+                                <option value="male-nathan">Nathan</option>
+                            </optgroup>
+                            <optgroup label="Female">
+                                <option value="female-ava">Ava</option>
+                                <option value="female-avery">Avery</option>
+                                <option value="female-brooklyn">Brooklyn</option>
+                                <option value="female-madison">Madison</option>
+                                <option value="female-sophie">Sophie</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                </div>
+                <button id="off" class="btn active"><i class="fa-solid fa-volume-xmark active"></i></button>
             </div>
-            <textarea id="input" type="text" placeholder="Type your message..." maxlength="1500"></textarea>
-            <button id="send" class="active btn">Send</button>
-        </div>
 
-        <footer>
-            <p>©2023 CovaSoft corporation</p>
-        </footer>
+            <div id="chatArea">
+                <p class="text">
+                    Hiện tại Trợ lý Cova vẫn ở trong thử nghiệm Beta nên gặp lỗi là chuyện bình thường
+                    <br>
+                    <a href="/Src/Pages/CovaSoft/contact.html">Liên hệ với chúng tôi</a> nếu bạn có bất kì câu hỏi nào
+                </p>
+                <p class="text">Nhấn <span class="key">Enter</span> để gửi, và nhấn <span class="key">Shift</span> + <span class="key">Enter</span> để xuống dòng</p>
+            </div>
+            <textarea id="input" type="text" placeholder="Hỏi tôi bất cứ điều gì" maxlength="1500"></textarea>
+            <p id="error" class="active"></p>
+            <button id="send" class="active btn">Gửi</button>
+        </div>
 
         <script src="/Src/JS/CovaSoft/chat.js"></script>
         <script src="/Src/Global/glo.js"></script>

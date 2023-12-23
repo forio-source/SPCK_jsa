@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>CovaSoft</title>
+        <title>CovaSoft - Official homepage</title>
         <link rel="stylesheet" href="/Src/Global/cova.css">
         <link rel="stylesheet" href="/Src/CSS/CovaSoft/index.css">
-        <link rel="icon" type="image/x-icon" href="/Assets/Icons/icon.jpg">
+        <link rel="icon" type="image/x-icon" href="/Assets/Icons/icon.png">
 
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
@@ -16,101 +16,108 @@
         <header>
             <img src="/Assets/Icons/logo.png" alt="Logo">
             <ul>
-                <li title="Home" onclick="golink('/Src/Pages/CovaSoft/')"><i class="fa-solid fa-house"></i></li>
-                <li title="About us" onclick="golink('/Src/Pages/CovaSoft/about.html')"><i class="fa-solid fa-circle-info"></i></li>
-                <li title="Our products" style="font-size: 30px;"><ion-icon name="albums"></ion-icon></li>
-                <li title="Cova Store" onclick="golink('/Src/Pages/CovaSoft/store.html')"><i class="fa-solid fa-bag-shopping"></i></li>
-                <li title="Cova assistant" onclick="golink('/Src/Pages/CovaSoft/chat.html')" id="chat">
-                    <span>
-                        <i class="fa-regular fa-square"></i>
-                        <i class="fa-regular fa-square top" style="transform: rotateZ(45deg);"></i>
-                    </span>
-                </li>
-                <li title="Contact us" onclick="golink('/Src/Pages/CovaSoft/contact.html')"><i class="fa-solid fa-envelope"></i></li>
-                <li title="Premium" onclick="golink('/Src/Pages/CovaSoft/pack.html')"><i class="fa-solid fa-crown"></i></li>
-                <li id="account" onclick="golink('/Src/Pages/CovaSoft/login-signup.html')"><h6 style="margin: 0 10px 0 0;">Log in</h6><i class="fa-solid fa-arrow-right-to-bracket"></i></i></li>
+                <li data-visible="" onclick="golink('/Src/Pages/CovaSoft/')">Trang chủ</li>
+                <li data-visible="chat.html" onclick="golink('/Src/Pages/CovaSoft/chat.html')">Altis AI</li>
+                <li>Workspace</li>
+                <li data-visible="store.html" onclick="golink('/Src/Pages/CovaSoft/store.html')">Cửa hàng</li>
+                <li id="account" data-visible="account.html" onclick="golink('/Src/Pages/CovaSoft/login-signup.html')"><h6 style="margin: 0 10px 0 0;">Đăng nhập</h6><i class="fa-solid fa-arrow-right-to-bracket"></i></i></li>
             </ul>
         </header>
 
         <div id="banner">
+            <ul id="list">
+                <li id="active">Nổi bật</li>
+                <li>AI</li>
+                <li>Cova X</li>
+                <li>CovaSoft Thái Lan</li>
+                <li>CovaSoft hợp tác với Cubik inc.</li>
+            </ul>
             <div>
-                <h1>
-                    We are aiming to the new age of tech
-                </h1>
+                <div class="left">
+                    <h1>
+                        <span style="font-size: .9em;">Cova Plus đã tốt</span>
+                        <br>
+                        <span style="font-size: 1.5em;">Nay còn tốt hơn!</span>
+                    </h1>
+                    <p>Một trong những trình duyệt web có độ bảo mật cao nhất và được cải thiện tốc độ đáng kể so với Cova Plus </p>
+                    <button class="btn">Mua Cova X ngay</button>
+                </div>
+                <div class="right">
+                    <img src="/Assets/Icons/covax.png" alt="">
+                </div>
             </div>
         </div>
 
-        <div class="section-wrapper" id="quote">
-            <div id="icon"></div>
-            <h1>Abc Omg - CEO</h1>
-            <p>
-                Don't wait for the perfect moment,
-                <br>
-                take the moment and make it perfect.
-            </p>
+        <div id="workspaceEdu">
+            <div class="content">
+                <h1>Cova Workspace cho giáo dục nay đã khả dụng</h1>
+                <button class="btn" style="width: fit-content;">Tìm hiểu thêm</button>
+            </div>
+            <div class="img"></div>
         </div>
+
         <div class="section-wrapper" id="products">
             <h1>
-                Our products
+                Sản phẩm của chúng tôi
             </h1>
             <div>
-                <div class="premium" onclick="golink('/Src/Pages/CovaSoft/chat.html')">
-                    <h1>Cova assistant</h1>
-                    <p>Friendly copilot</p>
-                    <img src="/Assets/Icons/covaassistant.png" alt="">
+                <div class="tagged" onclick="golink('/Src/Pages/CovaSoft/chat.html')">
+                    <img src="/Assets/Icons/altisai.png" alt="">
+                    <h3>Trợ lý Cova</h3>
+                    <p>Một trợ lý hoàn hỏa cho bạn</p>
                 </div>
-                <div onclick="golink('/Src/Pages/CovaSoft/dictionary.html')">
-                    <h1>Cova Dictionary</h1>
-                    <p>Dictionary</p>
+                <div onclick="golink('/Src/Pages/CovaDictionary')">
                     <img src="/Assets/Icons/covadictionary.png" alt="">
+                    <h3>Cova Dictionary</h3>
+                    <p>Explore enormous English words library made for you</p>
                 </div>
-                <div class="premium">
-                    <h1>Antom Defender</h1>
-                    <p>Antivirus</p>
+                <div>
                     <img src="/Assets/Icons/antomdefender.png" alt="">
+                    <h3>Antom Defender</h3>
+                    <p>Bảo vệ máy tính của bạn khỏi virus và hệ thống theo dõi</p>
                 </div>
                 <div>
-                    <h1>Cova Studio</h1>
-                    <p>Coding program</p>
                     <img src="/Assets/Icons/covastudio.png" alt="">
+                    <h3>Cova Studio</h3>
+                    <p>Một nơi để thỏa sức những ý tưởng của bạn</p>
                 </div>
-                <div class="premium">
-                    <h1>Cova Games Studio</h1>
-                    <p>Game-developing place</p>
+                <div>
                     <img src="/Assets/Icons/covagamesstudio.png" alt="">
+                    <h3>Cova Games Studio</h3>
+                    <p>Tạo game và bán trên Cova Store để nhận được tiền cho bạn</p>
                 </div>
                 <div>
-                    <h1>Cova Workspace</h1>
-                    <p>Office tools</p>
                     <img src="/Assets/Icons/covaworkspace.png" alt="">
+                    <h3>Cova Workspace</h3>
+                    <p>Công việc đơn giản hơn cho bạn</p>
                 </div>
                 <div>
-                    <h1>Cova Plus</h1>
-                    <p>Web browser</p>
                     <img src="/Assets/Icons/covaplus.png" alt="">
+                    <h3>Cova Plus</h3>
+                    <p>Một trình duyệt bảo mật, nhanh và đáng tin cậy cho bạn</p>
+                </div>
+                <div class="tagged comingsoon">
+                    <img src="/Assets/Icons/hoverstream.png" alt="">
+                    <h3>Hover Stream</h3>
+                    <p>Xem phim mọi lúc, mọi nơi</p>
                 </div>
                 <div>
-                    <h1>Hido</h1>
-                    <p>Stream movies</p>
-                    <img src="/Assets/Icons/hido.png" alt="">
+                    <img src="/Assets/Icons/s-cloud-covaworkspace.png" alt="">
+                    <h3>S Cloud</h3>
+                    <p>Bản giới hạn tính năng của Cova Smart Cloud</p>
                 </div>
                 <div>
-                    <h1>Cloudy Box</h1>
-                    <p>Free version of an app in Cova Workspace</p>
-                    <img src="/Assets/Icons/cloudybox-covaworkspace.png" alt="">
-                </div>
-                <div class="premium">
-                    <h1>Photorian</h1>
-                    <p>Make your photos awesome</p>
-                    <img src="/Assets/Icons/photorian.png" alt="">
+                    <img src="/Assets/Icons/clippin.png" alt="">
+                    <h3>Clippin</h3>
+                    <p>Chỉnh sửa hình ảnh và video trong 1 ứng dụng</p>
                 </div>
                 <div>
-                    <h1>Cova Travel</h1>
-                    <p>Let's travel</p>
                     <img src="/Assets/Icons/covatravel.png" alt="">
+                    <h3>Cova Travel</h3>
+                    <p>Du lịch nay đã dễ dàng hơn</p>
                 </div>
             </div>
-            <button class="btn"><i class="fa-solid fa-bars" style="margin-right: 10px;"></i>Show more</button>
+            <button class="btn"><i class="fa-solid fa-bars" style="margin-right: 10px;"></i>Hiển thị thêm</button>
         </div>
 
         <footer>
