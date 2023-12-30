@@ -1,0 +1,170 @@
+#main {
+    padding: 40px 80px;
+    display: grid;
+    grid-template: 
+        "icon username btnList1"
+        "btnList2 btnList2 btnList2"
+        "menu menu menu"
+        "content content content";
+    grid-template-columns: 80px calc(50% - 80px) calc(50%);
+    grid-template-rows: 80px auto auto;
+    row-gap: 30px;
+}
+#main > .section {
+    background-color: white;
+    box-shadow: var(--low-shadow);
+    border-radius: var(--bdr-rad);
+}
+#main > div#img {
+    height: 100%;
+    grid-area: icon;
+    position: relative;
+    cursor: pointer;
+}
+#main > div#img::after {
+    content: "\f044";
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    background-color: rgba(0, 0, 0, 0.25);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: "Font Awesome 6 Free";
+    transition: all .2s ease;
+}
+#main > div#img:hover::after {
+    opacity: 1;
+}
+#main > div#userContent {
+    grid-area: username;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 25px;
+}
+#main > div#userContent > h1, #main > div#userContent > p {
+    margin: 0;
+}
+
+
+#main > div#btnList1 {
+    grid-area: btnList1;
+    display: flex;
+}
+#main > div#btnList1 > div {
+    flex: 1;
+    margin: 5px;
+    padding: 10px 15px;
+    border-radius: var(--bdr-rad);
+    display: flex;
+    align-items: center;
+}
+#main > div#btnList1 > div:hover {
+    background-color: var(--lt-main-color);
+    cursor: pointer;
+    user-select: none;
+}
+#main > div#btnList1 > div > img {
+    height: 100%;
+}
+#main > div#btnList1 > div > h5 {
+    margin-left: 15px;
+}
+
+#main > div#btnList2 {
+    grid-area: btnList2;
+    display: flex;
+    padding: 10px;
+}
+#main > div#btnList2 > div {
+    flex: 1;
+    padding: 15px 20px;
+    border-radius: var(--bdr-rad);
+    display: flex;
+    align-items: center;
+}
+#main > div#btnList2 > div:hover {
+    background-color: var(--lt-main-color);
+    cursor: pointer;
+    user-select: none;
+}
+#main > div#btnList2 > div > h6 {
+    margin: 0;
+}
+#main > div#btnList2 > div > h6 > i {
+    margin-right: 15px;
+}
+
+#main > ul#menu {
+    grid-area: menu;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    position: sticky;
+    top: 80px;
+    padding: 10px 0;
+    width: 100%;
+}
+#main > ul#menu.sticking {
+    background-color: white;
+    border-radius: var(--bdr-rad);
+    box-shadow: var(--high-shadow);
+    width: calc(100vw - 75px);
+    transform: translateX(-50px);
+    padding: 10px 15px;
+    transition: all .2 ease, width .5s ease, transform .5s ease;
+}
+#main > ul#menu > li {
+    font-size: var(--default-ft-sz);
+    padding: 10px 20px;
+    border-radius: var(--bdr-rad);
+    background-color: white;
+    color: var(--title-color);
+    box-shadow: var(--low-shadow);
+    margin: 5px 5px 5px 0;
+}
+#main > ul#menu > li + li {
+    margin-left: 5px;
+}
+#main > ul#menu > li#onChoosing {
+    background-color: var(--main-color);
+    color: white;
+}
+#main > ul#menu > li:hover {
+    background-color: var(--lt-main-color);
+    color: var(--main-color);
+    box-shadow: var(--shadow);
+    transform: translateY(-2px);
+    user-select: none;
+    cursor: pointer;
+}
+#main > ul#menu > li:active {
+    background-color: var(--lt-main-color);
+    color: var(--main-color);
+    box-shadow: 0 1px 2px 0 #0003;
+    transform: none;
+}
+
+#main > div#tabPages {
+    grid-area: content;
+    padding: 50px;
+}
+#main > div#tabPages > div > h1:first-child {
+    margin-top: 0;
+    text-align: center;
+}
+#main > div#tabPages > div > p.aboutTab {
+    text-align: center;
+}
+#main > div#tabPages > div > div.section {
+    padding: 20px;
+    border-radius: var(--bdr-rad);
+    box-shadow: var(--low-shadow);
+    background-color: rgb(250, 250, 250);
+    margin-top: 50px;
+}

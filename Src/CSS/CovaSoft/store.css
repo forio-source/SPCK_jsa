@@ -85,7 +85,7 @@
     color: var(--main-color);
 }
 
-div#main {
+div#main, div#gamebox {
     padding: 60px;
 }
 div#main > h1 > i {
@@ -166,25 +166,57 @@ div#main > div.banner#workspace > div.right img {
 div#main > div.banner#workspace > div.left > div {
     display: flex;
 }
-div#main > div.banner#workspace > div.left > div > button:hover > i {
-    scale: 1.2;
+
+div#gamebox {
+    background: linear-gradient(to bottom, rgba(20, 20, 20, 0), rgba(20, 20, 20, 0.05) 5%, rgba(20, 20, 20, 0.3) 10%, rgba(20, 20, 20, 0.7) 15%, rgba(20, 20, 20, 0.9) 20%, rgb(20, 20, 20) 25%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
-div#main > div.banner.game-banner {
+div#gamebox button {
+    box-shadow: none;
+    background-color: rgba(20, 20, 20, .75);
+    border: 2px solid white;
+    padding: 8px 28px;
+    width: fit-content;
+}
+div#gamebox button:hover {
+    background-color: rgb(25, 33, 44, .75);
+    border-color: var(--main-color);
+}
+div#gamebox > button {
+    position: relative;
+    padding-left: 60px;
+    margin-bottom: 120px;
+}
+div#gamebox > div#icon {
+    width: 100%;
+    height: 100px;
+    background: url(/Assets/Icons/gamebox-store-white-text.png) center/contain no-repeat;
+    margin:  500px 0 50px;
+}
+div#gamebox > div.banner {
     background: center/cover no-repeat;
     padding: 0;
     overflow: hidden;
     display: block;
+    border-radius: var(--bdr-rad);
+    position: relative;
+    width: 100%;
 }
-div#main > div.banner.game-banner + div.banner.game-banner {
+div#gamebox > div.banner + div.banner {
     margin-top: 40px;
 }
-div#main > div.banner.game-banner#forza {
+div#gamebox > div.banner#forza {
     animation: slideshow1 60s ease infinite;
 }
-div#main > div.banner.game-banner#wfs {
+div#gamebox > div.banner#wfs {
     animation: slideshow2 60s ease infinite;
 }
-div#main > div.banner.game-banner.new::before {
+div#gamebox > div.banner#cityhorizon3 {
+    animation: slideshow3 60s ease infinite;
+}
+div#gamebox > div.banner.new::before {
     content: "Mới ra mắt";
     font-size: calc(var(--default-ft-sz) + 2px);
     padding: 10px 20px;
@@ -197,16 +229,32 @@ div#main > div.banner.game-banner.new::before {
     color: white;
     font-weight: 600;
 }
-div#main > div.banner.game-banner > div {
+div#gamebox > div.banner > div {
     background: linear-gradient(to right, rgba(0, 0, 0, .75), rgba(0, 0, 0, 0));
     padding: 100px;
     width: 100%;
 }
-div#main > div.banner.game-banner > div > img {
+div#gamebox > div.banner > div > img {
     height: 150px;
 }
-div#main > div.banner.game-banner > div > div > button {
+div#gamebox > div.banner > div > div > button {
     margin-top: 60px;
+    position: relative;
+}
+div#gamebox > div.banner > div > div > button:first-child {
+    padding-left: 60px;
+}
+div#gamebox > div.banner > div > div > button:first-child::before, div#gamebox > button::before {
+    content: "";
+    height: 28px;
+    aspect-ratio: 1/1;
+    background: url(/Assets/Icons/gamebox-white-simple.png) center/contain no-repeat;
+    display: inline-block;
+    position: absolute;
+    left: 20px;
+}
+div#gamebox > div.banner > div > div > button:first-child:hover::before, div#gamebox > button:hover:before {
+    background-image: url(/Assets/Icons/gamebox-simple.png);
 }
 
 div#main > div.list {
@@ -229,6 +277,10 @@ div#main > div.list > div {
 div#main > div.list > div:hover {
     transform: translateY(-5px);
     box-shadow: var(--high-shadow);
+}
+div#main > div.list > div:active {
+    transform: none;
+    box-shadow: var(--shadow);
 }
 div#main > div.list > div > div {
     display: flex;
@@ -294,4 +346,13 @@ div#main > div.list > div > div.content > span::before {
     68.33% {background-image: url(/Assets/Images/worldflightsimulator3.jpg);}
     73.66% {background-image: url(/Assets/Images/worldflightsimulator1.jpg);}
     100% {background-image: url(/Assets/Images/worldflightsimulator1.jpg);}
+}
+@keyframes slideshow3 {
+    0% {background-image: url(/Assets/Images/cityhorizoniii-1.jpg);}
+    5% {background-image: url(/Assets/Images/cityhorizoniii-2.jpg);}
+    36.66% {background-image: url(/Assets/Images/cityhorizoniii-2.jpg);}
+    41.66% {background-image: url(/Assets/Images/cityhorizoniii-3.jpg);}
+    68.33% {background-image: url(/Assets/Images/cityhorizoniii-3.jpg);}
+    73.66% {background-image: url(/Assets/Images/cityhorizoniii-1.jpg);}
+    100% {background-image: url(/Assets/Images/cityhorizoniii-1.jpg);}
 }

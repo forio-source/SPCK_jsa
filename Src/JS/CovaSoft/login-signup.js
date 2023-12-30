@@ -42,6 +42,7 @@ signup.addEventListener("submit", (e) => {
     if (emailDomains.some(i => values.Email.includes(i)) && values.Pass.length >= 6 && values.Pass == values.RePass && localStorage.getItem("Account") == undefined) {
         let account = {
             email: values.Email,
+            userName: "User" + Math.round(Math.random() * 10) + Math.round(Math.random() * 10) + Math.round(Math.random() * 10) + Math.round(Math.random() * 10) + Math.round(Math.random() * 10) + Math.round(Math.random() * 10) + Math.round(Math.random() * 10) + Math.round(Math.random() * 10) + Math.round(Math.random() * 10),
             password: values.RePass,
             covaDictionaryLoggedin: false,
             avatar: "/Assets/Icons/user.png",

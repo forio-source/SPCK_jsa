@@ -147,7 +147,6 @@ function scrollStick() {
     const copies = area.getElementsByClassName("copy");
 
     for (let i = 0; i < copies.length; i++) {
-        let height = area.scrollHeight;
         let elementTop = copies[i].parentNode.getBoundingClientRect().top;
         let elementBottom = copies[i].parentNode.getBoundingClientRect().bottom;
 

@@ -94,9 +94,10 @@ h1 {
 }
 hr {
     border: none;
-    height: 4px;
+    height: 3px;
     background-color: #ddd;
     margin: 60px 0;
+    border-radius: 2px;
 }
 
 span.key {
@@ -104,6 +105,45 @@ span.key {
     border-radius: 5px;
     border: 1px solid var(--text-color);
     cursor: default;
+}
+
+div#loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: white;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: initial;
+    transform: none;
+}
+div#loading > img {
+    height: 20%;
+    animation: reveal 1s ease;
+}
+div#loading > i {
+    font-size: 40px;
+}
+div#loading::before {
+    content: "\f1ce";
+    font-family: "Font Awesome 6 Free";
+    font-weight: bold;
+    position: absolute;
+    bottom: 70px;
+    font-size: calc(var(--default-ft-sz) + 20px);
+    color: var(--main-color);
+    opacity: .75;
+    animation: spin .75s linear infinite;
+    opacity: 0;
+    transition: opacity .2s ease;
+}
+div#loading.true::before {
+    opacity: 1;
 }
 
 div#apis {
@@ -180,6 +220,7 @@ select {
     appearance: none;
     cursor: pointer;
 }
+
 div.select-wrapper {
     max-width: 100%;
     position: relative;
@@ -302,7 +343,7 @@ header > ul > li:hover {
 header > ul > li[data-visible="pack.html"]:hover * {
     color: goldenrod;
 }
-header > ul > li:hover::before, header > ul > li#currentPage::before {
+header > ul > li:hover::before, header > ul > li.currentPage::before {
     width: calc(100% - 20px);
     opacity: 1;
 }
@@ -310,4 +351,19 @@ header > ul > li:active::before {
     width: calc(100% - 30px);
     opacity: 1;
     transition: all .075s linear;
+}
+
+@keyframes reveal {
+    0% {transform: rotateZ(20deg); scale: 200; opacity: 0;}
+    50% {transform: rotateZ(-5deg); scale: 0.75; opacity: 1;}
+    60% {transform: rotateZ(5deg); scale: 1.25; opacity: 1;}
+    75% {transform: rotateZ(-2.5deg); scale: .875; opacity: 1;}
+    85% {transform: rotateZ(1deg); scale: 1.0625; opacity: 1;}
+    90% {transform: rotateZ(-0.5deg); scale: 1.025; opacity: 1;}
+    95% {transform: rotateZ(0.25deg); scale: .975; opacity: 1;}
+    100% {transform: none; scale: 1; opacity: 1;}
+}
+@keyframes spin {
+    0% {transform: rotateZ(0)}
+    100% {transform: rotateZ(360deg)}
 }

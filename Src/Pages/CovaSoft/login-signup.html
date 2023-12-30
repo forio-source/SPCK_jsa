@@ -20,23 +20,23 @@
                 <li data-visible="chat.html" onclick="golink('/Src/Pages/CovaSoft/chat.html')">Altis AI</li>
                 <li>Workspace</li>
                 <li data-visible="store.html" onclick="golink('/Src/Pages/CovaSoft/store.html')">Cửa hàng</li>
-                <li id="account" data-visible="account.html" onclick="golink('/Src/Pages/CovaSoft/login-signup.html')"><h6 style="margin: 0 10px 0 0;">Đăng nhập</h6><i class="fa-solid fa-arrow-right-to-bracket"></i></i></li>
+                <li id="account" data-visible="account.html" onclick="golink('/Src/Pages/CovaSoft/login-signup.html')"><h6 style="margin: 0 10px 0 0;">Đăng nhập</h6><i class="fa-solid fa-arrow-right-to-bracket"></i></li>
             </ul>
         </header>
 
         <div id="wrapper">
             <form class="section" id="loginForm" style="display: block;">
                 <h2>Đăng nhập</h2>
-                <input class="email" type="email" placeholder="Email">
-                <input id="password" type="password" placeholder="Mật khẩu">
+                <input class="email" type="email" placeholder="Email" required>
+                <input id="password" type="password" placeholder="Mật khẩu" required>
                 <a href="javascript:void(0)">Chưa có tài khoản?</a>
                 <button class="submit btn">Đăng nhập</button>
             </form>
             <form class="section" id="signupForm" style="display: none;">
                 <h2>Đăng ký</h2>
-                <input class="email" type="email" placeholder="Email">
-                <input id="password1" type="password" placeholder="Mật khẩu">
-                <input id="password2" type="password" placeholder="Nhập lại mật khẩu">
+                <input class="email" type="email" placeholder="Email" required>
+                <input id="password1" type="password" placeholder="Mật khẩu" required>
+                <input id="password2" type="password" placeholder="Nhập lại mật khẩu" required>
                 <a href="javascript:void(0)">Đăng nhập vào tài khoản</a>
                 <button class="submit btn">Đăng ký</button>
             </form>
