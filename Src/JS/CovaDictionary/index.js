@@ -57,7 +57,7 @@ search.addEventListener("change", () => {
 
 
 save.addEventListener("click", function() {
-    if (localStorage.getItem("Email") != undefined) {
+    if (localStorage.getItem("Account") != undefined) {
         if (localStorage.getItem("Saved") == undefined) {
             let saveTable = []
             localStorage.setItem("Saved", JSON.stringify(saveTable))
